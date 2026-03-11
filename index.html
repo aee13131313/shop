@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学科书城商家数据看板</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e8e8e8;
+        }
+
+        .control-group {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .control-group label {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+            min-width: 80px;
+        }
+
+        select {
+            padding: 10px 14px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+            min-width: 200px;
+            transition: all 0.3s;
+            color: #333;
+        }
+
+        select:hover {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+        }
+
+        .btn {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .top-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .summary-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .summary-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dimension-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .dimension-btn {
+            padding: 8px 14px;
+            border: 1px solid #e0e0e0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s;
+        }
+
+        .dimension-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .dimension-btn:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .summary-value {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f7 100%);
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .summary-value-label {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .summary-value-number {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .comparison-box {
+            border: none;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            align-items: center;
+            background: linear-gradient(135deg, #f0f4ff 0%, #f5f0ff 100%);
+            margin-top: 15px;
+        }
+
+        .comparison-item-top {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .comparison-item-bottom {
+            text-align: center;
+        }
+
+        .comparison-label {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison-change {
+            font-size: 20px;
+            font-weight: 800;
+            margin-top: 8px;
+        }
+
+        .comparison-change.up {
+            color: #ff6b6b;
+        }
+
+        .comparison-change.down {
+            color: #52c41a;
+        }
+
+        .summary-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chart-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .chart-wrapper {
+            flex: 1;
+            position: relative;
+            min-height: 220px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f7 100%);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .table-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            overflow-x: auto;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+        }
+
+        .table-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .search-box {
+            margin-bottom: 25px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .search-input {
+            width: 300px;
+            padding: 12px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .search-input:hover {
+            border-color: #667eea;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .search-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+        }
+
+        .clear-search-btn {
+            padding: 12px 24px;
+            background: #f5f5f5;
+            color: #333;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .clear-search-btn:hover {
+            background: #efefef;
+            border-color: #d0d0d0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th {
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f7 100%);
+            padding: 16px;
+            text-align: center;
+            font-weight: 700;
+            color: #333;
+            border-bottom: 2px solid #e8e8e8;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        th:nth-child(1),
+        th:nth-child(2) {
+            text-align: left;
+        }
+
+        th.sortable {
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        th.sortable:hover {
+            background: linear-gradient(135deg, #eff1f7 0%, #eaeef7 100%);
+        }
+
+        th.sortable::after {
+            content: ' ⇅';
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        th.sortable.asc::after {
+            content: ' ↑';
+            color: #667eea;
+        }
+
+        th.sortable.desc::after {
+            content: ' ↓';
+            color: #667eea;
+        }
+
+        td {
+            padding: 18px 16px;
+            border-bottom: 1px solid #f5f5f5;
+            text-align: center;
+        }
+
+        td:nth-child(1),
+        td:nth-child(2) {
+            text-align: left;
+        }
+
+        tr:hover {
+            background: #fafbfc;
+        }
+
+        .data-cell {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .data-value {
+            font-weight: 700;
+            color: #333;
+            font-size: 15px;
+            min-width: 80px;
+        }
+
+        .data-changes {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .data-change-inline {
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.03);
+            white-space: nowrap;
+        }
+
+        .data-change-inline.up {
+            color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.08);
+        }
+
+        .data-change-inline.down {
+            color: #52c41a;
+            background: rgba(82, 196, 26, 0.08);
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        /* 商家详情模态框样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 35px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 1400px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.3s;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .modal-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .modal-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-right {
+            display: flex;
+            flex-direction: column;
+            border-left: 2px solid #f0f0f0;
+            padding-left: 30px;
+        }
+
+        .modal-comparison-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .modal-comparison-selectors {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .comparison-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+            user-select: none;
+        }
+
+        .comparison-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #667eea;
+        }
+
+        .comparison-checkbox span {
+            font-weight: 500;
+        }
+
+        .modal-comparison-chart-wrapper {
+            flex: 1;
+            position: relative;
+            min-height: 300px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f7 100%);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 32px;
+            cursor: pointer;
+            color: #ccc;
+            transition: color 0.3s;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            color: #333;
+        }
+
+        .modal-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .modal-tab-btn {
+            padding: 10px 18px;
+            border: 1px solid #e0e0e0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s;
+        }
+
+        .modal-tab-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .modal-tab-btn:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .modal-chart-wrapper {
+            flex: 1;
+            position: relative;
+            height: 400px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #f0f2f7 100%);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .shop-name-link {
+            color: #667eea;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 600;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .shop-name-link:hover {
+            color: #764ba2;
+        }
+
+        @media (max-width: 768px) {
+            .summary-card {
+                grid-template-columns: 1fr;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .control-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                margin-left: 0;
+            }
+
+            .modal-content {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .modal-body {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-right {
+                border-left: none;
+                border-top: 2px solid #f0f0f0;
+                padding-left: 0;
+                padding-top: 20px;
+                margin-top: 20px;
+            }
+
+            .modal-chart-wrapper {
+                height: 300px;
+            }
+
+            .modal-comparison-chart-wrapper {
+                min-height: 250px;
+            }
+
+            .comparison-box {
+                gap: 30px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 学科书城商家数据看板</h1>
+            <p>全部商家数据统计与分析</p>
+        </div>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="monthSelect">选择月份：</label>
+                <select id="monthSelect">
+                    <option value="">-- 所有月份 --</option>
+                </select>
+                <button class="btn" onclick="resetFilters()">重置筛选</button>
+            </div>
+        </div>
+
+        <div id="dashboardContent"></div>
+    </div>
+
+    <!-- 商家详情模态框 -->
+    <div id="shopModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle">商家数据趋势</div>
+                <button class="modal-close" onclick="closeShopModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left">
+                    <div class="modal-tabs" id="modalTabs">
+                        <button class="modal-tab-btn active" onclick="switchModalDimension(this, 'consumption')">消费数据</button>
+                        <button class="modal-tab-btn" onclick="switchModalDimension(this, 'income')">收入数据</button>
+                        <button class="modal-tab-btn" onclick="switchModalDimension(this, 'albums')">创建专辑</button>
+                        <button class="modal-tab-btn" onclick="switchModalDimension(this, 'materials')">发布资料</button>
+                    </div>
+                    <div class="modal-chart-wrapper">
+                        <canvas id="shopDetailChart"></canvas>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <div class="modal-comparison-title">各维度对比</div>
+                    <div class="modal-comparison-selectors">
+                        <label class="comparison-checkbox">
+                            <input type="checkbox" value="consumption" checked onchange="updateComparisonChart()">
+                            <span>消费数据</span>
+                        </label>
+                        <label class="comparison-checkbox">
+                            <input type="checkbox" value="income" onchange="updateComparisonChart()">
+                            <span>收入数据</span>
+                        </label>
+                        <label class="comparison-checkbox">
+                            <input type="checkbox" value="albums" onchange="updateComparisonChart()">
+                            <span>创建专辑</span>
+                        </label>
+                        <label class="comparison-checkbox">
+                            <input type="checkbox" value="materials" onchange="updateComparisonChart()">
+                            <span>发布资料</span>
+                        </label>
+                    </div>
+                    <div class="modal-comparison-chart-wrapper">
+                        <canvas id="comparisonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="shop_data.js"></script>
+    <script>
+        let trendChartInstance = null;
+        let currentMonthlyData = null;
+        let currentMonth = null;
+
+        function init() {
+            populateSelects();
+            const monthSelect = document.getElementById('monthSelect');
+            if (monthSelect.options.length > 1) {
+                monthSelect.selectedIndex = 1;
+            }
+            renderDashboard();
+        }
+
+        function populateSelects() {
+            const months = new Set();
+            Object.values(shopMonthlyData).forEach(shop => {
+                if (shop.consumption && shop.consumption.months) {
+                    shop.consumption.months.forEach(m => {
+                        if (m && m.trim()) {
+                            months.add(m);
+                        }
+                    });
+                }
+            });
+
+            const monthSelect = document.getElementById('monthSelect');
+            const sortedMonths = Array.from(months).sort((a, b) => {
+                const aMatch = a.match(/(\d+)年(\d+)月/);
+                const bMatch = b.match(/(\d+)年(\d+)月/);
+                
+                if (!aMatch || !bMatch) return 0;
+                
+                const aYear = parseInt(aMatch[1]);
+                const aMonth = parseInt(aMatch[2]);
+                const bYear = parseInt(bMatch[1]);
+                const bMonth = parseInt(bMatch[2]);
+                
+                if (aYear !== bYear) {
+                    return bYear - aYear;
+                }
+                return bMonth - aMonth;
+            });
+
+            sortedMonths.forEach(month => {
+                const option = document.createElement('option');
+                option.value = month;
+                option.textContent = month;
+                monthSelect.appendChild(option);
+            });
+        }
+
+        function renderDashboard() {
+            let selectedMonth = document.getElementById('monthSelect').value;
+            const content = document.getElementById('dashboardContent');
+
+            if (!selectedMonth) {
+                const months = new Set();
+                Object.values(shopMonthlyData).forEach(shop => {
+                    if (shop.consumption && shop.consumption.months) {
+                        shop.consumption.months.forEach(m => {
+                            if (m && m.trim()) {
+                                months.add(m);
+                            }
+                        });
+                    }
+                });
+                const sortedMonths = Array.from(months).sort((a, b) => {
+                    const aMatch = a.match(/(\d+)年(\d+)月/);
+                    const bMatch = b.match(/(\d+)年(\d+)月/);
+                    
+                    if (!aMatch || !bMatch) return 0;
+                    
+                    const aYear = parseInt(aMatch[1]);
+                    const aMonth = parseInt(aMatch[2]);
+                    const bYear = parseInt(bMatch[1]);
+                    const bMonth = parseInt(bMatch[2]);
+                    
+                    if (aYear !== bYear) {
+                        return bYear - aYear;
+                    }
+                    return bMonth - aMonth;
+                });
+                selectedMonth = sortedMonths[0];
+            }
+
+            renderMonthlyDetail(selectedMonth, content);
+        }
+
+        function renderMonthlyDetail(month, container) {
+            currentMonth = month;
+
+            let allConsumption = 0, allIncome = 0, allAlbums = 0, allMaterials = 0;
+            Object.values(shopMonthlyData).forEach(shop => {
+                if (shop.consumption && shop.consumption.months) {
+                    const idx = shop.consumption.months.indexOf(month);
+                    if (idx !== -1) {
+                        allConsumption += shop.consumption.values[idx] || 0;
+                    }
+                }
+                if (shop.income && shop.income.months) {
+                    const idx = shop.income.months.indexOf(month);
+                    if (idx !== -1) {
+                        allIncome += shop.income.values[idx] || 0;
+                    }
+                }
+                if (shop.albums && shop.albums.months) {
+                    const idx = shop.albums.months.indexOf(month);
+                    if (idx !== -1) {
+                        allAlbums += shop.albums.values[idx] || 0;
+                    }
+                }
+                if (shop.materials && shop.materials.months) {
+                    const idx = shop.materials.months.indexOf(month);
+                    if (idx !== -1) {
+                        allMaterials += shop.materials.values[idx] || 0;
+                    }
+                }
+            });
+
+            let months = [];
+            const firstShop = Object.values(shopMonthlyData)[0];
+            if (firstShop && firstShop.consumption && firstShop.consumption.months) {
+                months = firstShop.consumption.months;
+            }
+
+            const monthlyData = {
+                consumption: [],
+                income: [],
+                albums: [],
+                materials: []
+            };
+
+            months.forEach((m, idx) => {
+                let mc = 0, mi = 0, ma = 0, mm = 0;
+                Object.values(shopMonthlyData).forEach(shop => {
+                    if (shop.consumption && shop.consumption.values) {
+                        mc += shop.consumption.values[idx] || 0;
+                    }
+                    if (shop.income && shop.income.values) {
+                        mi += shop.income.values[idx] || 0;
+                    }
+                    if (shop.albums && shop.albums.values) {
+                        ma += shop.albums.values[idx] || 0;
+                    }
+                    if (shop.materials && shop.materials.values) {
+                        mm += shop.materials.values[idx] || 0;
+                    }
+                });
+                monthlyData.consumption.push(mc);
+                monthlyData.income.push(mi);
+                monthlyData.albums.push(ma);
+                monthlyData.materials.push(mm);
+            });
+
+            currentMonthlyData = monthlyData;
+
+            // 计算同比和环比
+            const currentIdx = months.indexOf(month);
+            const lastMonthIdx = currentIdx - 1;
+            const lastYearIdx = currentIdx - 12;
+
+            const currentValue = monthlyData.consumption[currentIdx] || 0;
+            const lastMonthValue = lastMonthIdx >= 0 ? monthlyData.consumption[lastMonthIdx] || 0 : 0;
+            const lastYearValue = lastYearIdx >= 0 ? monthlyData.consumption[lastYearIdx] || 0 : 0;
+
+            const monthChange = lastMonthValue > 0 ? ((currentValue - lastMonthValue) / lastMonthValue * 100).toFixed(2) : 0;
+            const yearChange = lastYearValue > 0 ? ((currentValue - lastYearValue) / lastYearValue * 100).toFixed(2) : 0;
+
+            const monthChangeStr = monthChange >= 0 ? `↑ ${monthChange}%` : `↓ ${Math.abs(monthChange)}%`;
+            const yearChangeStr = yearChange >= 0 ? `↑ ${yearChange}%` : `↓ ${Math.abs(yearChange)}%`;
+
+            let html = `
+                <div class="top-cards">
+                    <div class="card">
+                        <div class="card-title">合计数据（全部商家 - ${month}）</div>
+                        <div class="summary-card">
+                            <div class="summary-left">
+                                <div class="dimension-tabs">
+                                    <button class="dimension-btn active" onclick="switchDimension(this, 'consumption')">消费数据</button>
+                                    <button class="dimension-btn" onclick="switchDimension(this, 'income')">收入数据</button>
+                                    <button class="dimension-btn" onclick="switchDimension(this, 'albums')">创建专辑</button>
+                                    <button class="dimension-btn" onclick="switchDimension(this, 'materials')">发布资料</button>
+                                </div>
+                                <div class="summary-value">
+                                    <div class="summary-value-label">消费数据</div>
+                                    <div class="summary-value-number" id="summaryValue">${allConsumption.toLocaleString()}</div>
+                                </div>
+                                <div class="comparison-box">
+                                    <div class="comparison-right" style="width: 100%; display: flex; gap: 40px; justify-content: center;">
+                                        <div class="comparison-item-top">
+                                            <div class="comparison-label">环比</div>
+                                            <div class="comparison-change ${monthChange >= 0 ? 'up' : 'down'}" style="font-size: 16px; font-weight: 700;" id="comparisonMonthChange">${monthChangeStr}</div>
+                                        </div>
+                                        <div class="comparison-item-bottom">
+                                            <div class="comparison-label">同比</div>
+                                            <div class="comparison-change ${yearChange >= 0 ? 'up' : 'down'}" style="font-size: 16px; font-weight: 700;" id="comparisonYearChange">${yearChangeStr}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary-right">
+                                <div class="chart-title">同比趋势</div>
+                                <div class="chart-wrapper">
+                                    <canvas id="trendChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+
+            setTimeout(() => {
+                initTrendChart(months, monthlyData.consumption, month);
+            }, 100);
+
+            renderShopDetails(month, container);
+        }
+
+        function renderShopDetails(month, container) {
+            let html = `
+                <div class="table-container">
+                    <div class="table-title">商家数据明细</div>
+                    <div class="search-box">
+                        <input type="text" id="shopSearch" class="search-input" placeholder="搜索商家ID或商家名称...">
+                        <button class="search-btn" onclick="filterShopData()">搜索</button>
+                        <button class="clear-search-btn" onclick="clearShopSearch()">清空</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>商家ID</th>
+                                <th>商家名称</th>
+                                <th class="sortable" onclick="sortShopTable('consumption')">消费数据</th>
+                                <th class="sortable" onclick="sortShopTable('income')">收入数据</th>
+                                <th class="sortable" onclick="sortShopTable('albums')">创建专辑</th>
+                                <th class="sortable" onclick="sortShopTable('materials')">发布资料</th>
+                            </tr>
+                        </thead>
+                        <tbody id="shopTableBody">
+            `;
+
+            const shopList = [];
+            const currentIdx = Object.values(shopMonthlyData)[0].consumption.months.indexOf(month);
+            const lastMonthIdx = currentIdx - 1;
+            const lastYearIdx = currentIdx - 12;
+
+            Object.entries(shopMonthlyData).forEach(([shopId, shop]) => {
+                if (shop.consumption && shop.consumption.months) {
+                    const idx = shop.consumption.months.indexOf(month);
+                    if (idx !== -1) {
+                        // 计算同比和环比
+                        const consumption = shop.consumption.values[idx] || 0;
+                        const consumptionLastMonth = lastMonthIdx >= 0 ? shop.consumption.values[lastMonthIdx] || 0 : 0;
+                        const consumptionLastYear = lastYearIdx >= 0 ? shop.consumption.values[lastYearIdx] || 0 : 0;
+
+                        const income = shop.income.values[idx] || 0;
+                        const incomeLastMonth = lastMonthIdx >= 0 ? shop.income.values[lastMonthIdx] || 0 : 0;
+                        const incomeLastYear = lastYearIdx >= 0 ? shop.income.values[lastYearIdx] || 0 : 0;
+
+                        const albums = shop.albums.values[idx] || 0;
+                        const albumsLastMonth = lastMonthIdx >= 0 ? shop.albums.values[lastMonthIdx] || 0 : 0;
+                        const albumsLastYear = lastYearIdx >= 0 ? shop.albums.values[lastYearIdx] || 0 : 0;
+
+                        const materials = shop.materials.values[idx] || 0;
+                        const materialsLastMonth = lastMonthIdx >= 0 ? shop.materials.values[lastMonthIdx] || 0 : 0;
+                        const materialsLastYear = lastYearIdx >= 0 ? shop.materials.values[lastYearIdx] || 0 : 0;
+
+                        shopList.push({
+                            id: shopId,
+                            name: shop.name,
+                            consumption: consumption,
+                            consumptionLastMonth: consumptionLastMonth,
+                            consumptionLastYear: consumptionLastYear,
+                            income: income,
+                            incomeLastMonth: incomeLastMonth,
+                            incomeLastYear: incomeLastYear,
+                            albums: albums,
+                            albumsLastMonth: albumsLastMonth,
+                            albumsLastYear: albumsLastYear,
+                            materials: materials,
+                            materialsLastMonth: materialsLastMonth,
+                            materialsLastYear: materialsLastYear
+                        });
+                    }
+                }
+            });
+
+            shopList.sort((a, b) => b.consumption - a.consumption);
+
+            // 存储完整的商家列表供搜索使用
+            window.fullShopList = shopList;
+            window.currentSortColumn = 'consumption';
+            window.currentSortOrder = 'desc';
+
+            shopList.forEach(shop => {
+                const consumptionChange = shop.consumptionLastMonth > 0 ? ((shop.consumption - shop.consumptionLastMonth) / shop.consumptionLastMonth * 100).toFixed(1) : 0;
+                const consumptionYearChange = shop.consumptionLastYear > 0 ? ((shop.consumption - shop.consumptionLastYear) / shop.consumptionLastYear * 100).toFixed(1) : 0;
+
+                const materialsChange = shop.materialsLastMonth > 0 ? ((shop.materials - shop.materialsLastMonth) / shop.materialsLastMonth * 100).toFixed(1) : 0;
+                const materialsYearChange = shop.materialsLastYear > 0 ? ((shop.materials - shop.materialsLastYear) / shop.materialsLastYear * 100).toFixed(1) : 0;
+
+                const getChangeClass = (change) => change >= 0 ? 'up' : 'down';
+                const getChangeStr = (change) => change >= 0 ? `↑${change}%` : `↓${Math.abs(change)}%`;
+
+                html += `
+                    <tr>
+                        <td>${shop.id}</td>
+                        <td><span class="shop-name-link" onclick="openShopModal('${shop.id}', '${shop.name.replace(/'/g, "\\'")}', '${currentMonth}')">${shop.name}</span></td>
+                        <td>
+                            <div class="data-cell">
+                                <div class="data-value">${shop.consumption.toLocaleString()}</div>
+                                <div class="data-changes">
+                                    <span class="data-change-inline ${getChangeClass(consumptionChange)}">环${getChangeStr(consumptionChange)}</span>
+                                    <span class="data-change-inline ${getChangeClass(consumptionYearChange)}">同${getChangeStr(consumptionYearChange)}</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="data-cell">
+                                <div class="data-value">${shop.income.toLocaleString()}</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="data-cell">
+                                <div class="data-value">${shop.albums.toLocaleString()}</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="data-cell">
+                                <div class="data-value">${shop.materials.toLocaleString()}</div>
+                                <div class="data-changes">
+                                    <span class="data-change-inline ${getChangeClass(materialsChange)}">环${getChangeStr(materialsChange)}</span>
+                                    <span class="data-change-inline ${getChangeClass(materialsYearChange)}">同${getChangeStr(materialsYearChange)}</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            html += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+
+            container.innerHTML += html;
+
+            // 设置初始排序状态
+            const headers = document.querySelectorAll('th.sortable');
+            headers.forEach(header => {
+                header.classList.remove('asc', 'desc');
+            });
+            document.querySelectorAll('th.sortable')[0].classList.add('desc');
+        }
+
+        function sortShopTable(column) {
+            const tbody = document.getElementById('shopTableBody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            // 确定排序顺序
+            let order = 'asc';
+            if (window.currentSortColumn === column && window.currentSortOrder === 'asc') {
+                order = 'desc';
+            }
+
+            // 排序
+            rows.sort((a, b) => {
+                let aValue, bValue;
+                
+                switch(column) {
+                    case 'consumption':
+                        aValue = parseFloat(a.cells[2].textContent.replace(/,/g, ''));
+                        bValue = parseFloat(b.cells[2].textContent.replace(/,/g, ''));
+                        break;
+                    case 'income':
+                        aValue = parseFloat(a.cells[3].textContent.replace(/,/g, ''));
+                        bValue = parseFloat(b.cells[3].textContent.replace(/,/g, ''));
+                        break;
+                    case 'albums':
+                        aValue = parseFloat(a.cells[4].textContent.replace(/,/g, ''));
+                        bValue = parseFloat(b.cells[4].textContent.replace(/,/g, ''));
+                        break;
+                    case 'materials':
+                        aValue = parseFloat(a.cells[5].textContent.replace(/,/g, ''));
+                        bValue = parseFloat(b.cells[5].textContent.replace(/,/g, ''));
+                        break;
+                }
+
+                if (order === 'asc') {
+                    return aValue - bValue;
+                } else {
+                    return bValue - aValue;
+                }
+            });
+
+            // 重新插入排序后的行
+            rows.forEach(row => {
+                tbody.appendChild(row);
+            });
+
+            // 更新排序指示器
+            const headers = document.querySelectorAll('th.sortable');
+            headers.forEach(header => {
+                header.classList.remove('asc', 'desc');
+            });
+
+            const columnIndex = {
+                'consumption': 0,
+                'income': 1,
+                'albums': 2,
+                'materials': 3
+            };
+
+            headers[columnIndex[column]].classList.add(order);
+
+            // 保存当前排序状态
+            window.currentSortColumn = column;
+            window.currentSortOrder = order;
+        }
+
+        function filterShopData() {
+            const searchValue = document.getElementById('shopSearch').value.trim().toLowerCase();
+            if (!searchValue) {
+                alert('请输入搜索内容');
+                return;
+            }
+
+            const tbody = document.getElementById('shopTableBody');
+            const rows = tbody.querySelectorAll('tr');
+            let matchCount = 0;
+
+            rows.forEach(row => {
+                const shopId = row.cells[0].textContent.toLowerCase();
+                const shopName = row.cells[1].textContent.toLowerCase();
+
+                if (shopId.includes(searchValue) || shopName.includes(searchValue)) {
+                    row.style.display = '';
+                    matchCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            if (matchCount === 0) {
+                alert('未找到匹配的商家');
+            }
+        }
+
+        function clearShopSearch() {
+            document.getElementById('shopSearch').value = '';
+            const tbody = document.getElementById('shopTableBody');
+            const rows = tbody.querySelectorAll('tr');
+            rows.forEach(row => {
+                row.style.display = '';
+            });
+        }
+
+        // 支持回车键搜索
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('shopSearch');
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        filterShopData();
+                    }
+                });
+            }
+        });
+
+        function switchDimension(btn, dimension) {
+            document.querySelectorAll('.dimension-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const currentIdx = currentMonthlyData.consumption.findIndex((_, idx) => {
+                const m = Object.values(shopMonthlyData)[0].consumption.months[idx];
+                return m === currentMonth;
+            });
+
+            const data = currentMonthlyData[dimension];
+            const value = data[currentIdx] || 0;
+            document.getElementById('summaryValue').textContent = value.toLocaleString();
+
+            // 获取维度的中文名称
+            const dimensionNames = {
+                'consumption': '消费数据',
+                'income': '收入数据',
+                'albums': '创建专辑',
+                'materials': '发布资料'
+            };
+            const dimensionLabel = dimensionNames[dimension];
+
+            // 更新红框中的标签和数据
+            const summaryValueLabel = document.querySelector('.summary-value-label');
+            if (summaryValueLabel) {
+                summaryValueLabel.textContent = dimensionLabel;
+            }
+
+            // 更新环比和同比数据 - 所有维度都显示
+            const lastMonthIdx = currentIdx - 1;
+            const lastYearIdx = currentIdx - 12;
+
+            const currentValue = data[currentIdx] || 0;
+            const lastMonthValue = lastMonthIdx >= 0 ? data[lastMonthIdx] || 0 : 0;
+            const lastYearValue = lastYearIdx >= 0 ? data[lastYearIdx] || 0 : 0;
+
+            const monthChange = lastMonthValue > 0 ? ((currentValue - lastMonthValue) / lastMonthValue * 100).toFixed(2) : 0;
+            const yearChange = lastYearValue > 0 ? ((currentValue - lastYearValue) / lastYearValue * 100).toFixed(2) : 0;
+
+            const monthChangeStr = monthChange >= 0 ? `↑ ${monthChange}%` : `↓ ${Math.abs(monthChange)}%`;
+            const yearChangeStr = yearChange >= 0 ? `↑ ${yearChange}%` : `↓ ${Math.abs(yearChange)}%`;
+
+            // 更新红框中的数据 - 所有维度都显示
+            const monthChangeEl = document.getElementById('comparisonMonthChange');
+            const yearChangeEl = document.getElementById('comparisonYearChange');
+            
+            if (monthChangeEl) {
+                monthChangeEl.textContent = monthChangeStr;
+                monthChangeEl.className = `comparison-change ${monthChange >= 0 ? 'up' : 'down'}`;
+            }
+            if (yearChangeEl) {
+                yearChangeEl.textContent = yearChangeStr;
+                yearChangeEl.className = `comparison-change ${yearChange >= 0 ? 'up' : 'down'}`;
+            }
+
+            updateTrendChart(data, dimension);
+        }
+
+        function initTrendChart(months, data, currentMonth) {
+            const ctx = document.getElementById('trendChart');
+            if (!ctx) return;
+
+            const currentIdx = months.indexOf(currentMonth);
+            
+            // 获取近12个月的数据（包括当前月份）
+            const startIdx = Math.max(0, currentIdx - 11);
+            const chartMonths = months.slice(startIdx, currentIdx + 1);
+            const chartData = data.slice(startIdx, currentIdx + 1);
+            
+            // 获取去年同期的数据
+            const lastYearData = [];
+            for (let i = startIdx; i <= currentIdx; i++) {
+                const lastYearIdx = i - 12;
+                lastYearData.push(lastYearIdx >= 0 ? data[lastYearIdx] : null);
+            }
+            
+            // 当前月份在图表中的位置
+            const currentPointIdx = chartData.length - 1;
+            const currentPointColors = chartData.map((_, idx) => idx === currentPointIdx ? '#667eea' : '#b3c1ff');
+            const lastYearPointColors = lastYearData.map((_, idx) => idx === currentPointIdx ? '#ff9c6e' : '#ffc069');
+
+            if (trendChartInstance) {
+                trendChartInstance.destroy();
+            }
+
+            trendChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: chartMonths,
+                    datasets: [
+                        {
+                            label: '当前年份',
+                            data: chartData,
+                            borderColor: '#667eea',
+                            backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                            borderWidth: 2,
+                            pointRadius: 5,
+                            pointBackgroundColor: currentPointColors,
+                            pointBorderColor: '#667eea',
+                            pointBorderWidth: 2,
+                            tension: 0.4,
+                            fill: false
+                        },
+                        {
+                            label: '去年同期',
+                            data: lastYearData,
+                            borderColor: '#ff9c6e',
+                            backgroundColor: 'rgba(255, 156, 110, 0.1)',
+                            borderWidth: 2,
+                            pointRadius: 5,
+                            pointBackgroundColor: lastYearPointColors,
+                            pointBorderColor: '#ff9c6e',
+                            pointBorderWidth: 2,
+                            tension: 0.4,
+                            fill: false,
+                            borderDash: [5, 5]
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 15,
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#f0f0f0'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value.toLocaleString() + '元';
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateTrendChart(data, dimension) {
+            if (trendChartInstance) {
+                // 获取所有月份
+                let months = [];
+                const firstShop = Object.values(shopMonthlyData)[0];
+                if (firstShop && firstShop.consumption && firstShop.consumption.months) {
+                    months = firstShop.consumption.months;
+                }
+
+                const currentIdx = months.indexOf(currentMonth);
+                const startIdx = Math.max(0, currentIdx - 11);
+                const chartData = data.slice(startIdx, currentIdx + 1);
+                
+                // 获取去年同期的数据
+                const lastYearData = [];
+                for (let i = startIdx; i <= currentIdx; i++) {
+                    const lastYearIdx = i - 12;
+                    lastYearData.push(lastYearIdx >= 0 ? data[lastYearIdx] : null);
+                }
+                
+                trendChartInstance.data.datasets[0].data = chartData;
+                trendChartInstance.data.datasets[1].data = lastYearData;
+                
+                // 更新y轴标签格式
+                const unitMap = {
+                    'consumption': '元',
+                    'income': '元',
+                    'albums': '个',
+                    'materials': '份'
+                };
+                const unit = unitMap[dimension] || '';
+                
+                trendChartInstance.options.scales.y.ticks.callback = function(value) {
+                    return value.toLocaleString() + unit;
+                };
+                
+                trendChartInstance.update();
+            }
+        }
+
+        function resetFilters() {
+            const monthSelect = document.getElementById('monthSelect');
+            if (monthSelect.options.length > 1) {
+                monthSelect.selectedIndex = 1;
+            }
+            renderDashboard();
+        }
+
+        // 商家详情模态框相关函数
+        let shopDetailChartInstance = null;
+        let comparisonChartInstance = null;
+        let currentShopData = null;
+
+        function openShopModal(shopId, shopName, month) {
+            const modal = document.getElementById('shopModal');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalTitle.textContent = `${shopName} - 数据趋势`;
+            
+            // 获取商家数据
+            currentShopData = shopMonthlyData[shopId];
+            
+            if (!currentShopData) {
+                alert('未找到商家数据');
+                return;
+            }
+            
+            // 显示模态框
+            modal.classList.add('show');
+            
+            // 重置标签页
+            document.querySelectorAll('.modal-tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.modal-tab-btn')[0].classList.add('active');
+            
+            // 重置多选框
+            document.querySelectorAll('.comparison-checkbox input').forEach(checkbox => {
+                checkbox.checked = checkbox.value === 'consumption';
+            });
+            
+            // 绘制初始图表（消费数据）
+            setTimeout(() => {
+                initShopDetailChart('consumption');
+                updateComparisonChart();
+            }, 100);
+        }
+
+        function closeShopModal() {
+            const modal = document.getElementById('shopModal');
+            modal.classList.remove('show');
+            
+            if (shopDetailChartInstance) {
+                shopDetailChartInstance.destroy();
+                shopDetailChartInstance = null;
+            }
+            
+            if (comparisonChartInstance) {
+                comparisonChartInstance.destroy();
+                comparisonChartInstance = null;
+            }
+        }
+
+        function switchModalDimension(btn, dimension) {
+            document.querySelectorAll('.modal-tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            initShopDetailChart(dimension);
+        }
+
+        function updateComparisonChart() {
+            if (!currentShopData) return;
+            
+            const ctx = document.getElementById('comparisonChart');
+            if (!ctx) return;
+            
+            // 获取选中的维度
+            const selectedDimensions = [];
+            document.querySelectorAll('.comparison-checkbox input:checked').forEach(checkbox => {
+                selectedDimensions.push(checkbox.value);
+            });
+            
+            if (selectedDimensions.length === 0) {
+                if (comparisonChartInstance) {
+                    comparisonChartInstance.destroy();
+                    comparisonChartInstance = null;
+                }
+                return;
+            }
+            
+            // 获取近12个月的数据
+            const months = currentShopData[selectedDimensions[0]].months;
+            const startIdx = Math.max(0, months.length - 12);
+            const chartMonths = months.slice(startIdx);
+            
+            // 颜色配置
+            const colors = {
+                'consumption': '#667eea',
+                'income': '#52c41a',
+                'albums': '#faad14',
+                'materials': '#ff7a45'
+            };
+            
+            const dimensionNames = {
+                'consumption': '消费数据',
+                'income': '收入数据',
+                'albums': '创建专辑',
+                'materials': '发布资料'
+            };
+            
+            const unitMap = {
+                'consumption': '元',
+                'income': '元',
+                'albums': '个',
+                'materials': '份'
+            };
+            
+            // 构建数据集
+            const datasets = selectedDimensions.map(dimension => {
+                const data = currentShopData[dimension].values;
+                const chartData = data.slice(startIdx);
+                
+                return {
+                    label: dimensionNames[dimension] + `(${unitMap[dimension]})`,
+                    data: chartData,
+                    borderColor: colors[dimension],
+                    backgroundColor: colors[dimension] + '15',
+                    borderWidth: 2,
+                    pointRadius: 4,
+                    pointBackgroundColor: colors[dimension],
+                    pointBorderColor: colors[dimension],
+                    pointBorderWidth: 2,
+                    tension: 0.4,
+                    fill: false
+                };
+            });
+            
+            if (comparisonChartInstance) {
+                comparisonChartInstance.destroy();
+            }
+            
+            // 根据选中的维度确定需要的坐标轴
+            const yAxesConfig = {};
+            const datasetYAxisMap = {};
+            let yAxisIndex = 0;
+            
+            selectedDimensions.forEach(dimension => {
+                const unit = unitMap[dimension];
+                const axisKey = `y_${unit}`;
+                
+                if (!yAxesConfig[axisKey]) {
+                    yAxesConfig[axisKey] = {
+                        type: 'linear',
+                        position: yAxisIndex === 0 ? 'left' : 'right',
+                        beginAtZero: true,
+                        grid: {
+                            drawOnChartArea: yAxisIndex === 0,
+                            color: '#f0f0f0'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value.toLocaleString() + unit;
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: unit
+                        }
+                    };
+                    yAxisIndex++;
+                }
+                
+                datasetYAxisMap[dimension] = axisKey;
+            });
+            
+            // 更新数据集以使用对应的y轴
+            const updatedDatasets = datasets.map((dataset, index) => {
+                const dimension = selectedDimensions[index];
+                return {
+                    ...dataset,
+                    yAxisID: datasetYAxisMap[dimension]
+                };
+            });
+            
+            comparisonChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: chartMonths,
+                    datasets: updatedDatasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 15,
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        ...yAxesConfig,
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function initShopDetailChart(dimension) {
+            if (!currentShopData) return;
+            
+            const ctx = document.getElementById('shopDetailChart');
+            if (!ctx) return;
+            
+            const months = currentShopData[dimension].months;
+            const data = currentShopData[dimension].values;
+            
+            // 获取近12个月的数据
+            const startIdx = Math.max(0, months.length - 12);
+            const chartMonths = months.slice(startIdx);
+            const chartData = data.slice(startIdx);
+            
+            // 获取去年同期的数据
+            const lastYearData = [];
+            for (let i = startIdx; i < months.length; i++) {
+                const lastYearIdx = i - 12;
+                lastYearData.push(lastYearIdx >= 0 ? data[lastYearIdx] : null);
+            }
+            
+            // 当前月份在图表中的位置
+            const currentPointIdx = chartData.length - 1;
+            const currentPointColors = chartData.map((_, idx) => idx === currentPointIdx ? '#667eea' : '#b3c1ff');
+            const lastYearPointColors = lastYearData.map((_, idx) => idx === currentPointIdx ? '#ff9c6e' : '#ffc069');
+            
+            // 获取维度的中文名称
+            const dimensionNames = {
+                'consumption': '消费数据',
+                'income': '收入数据',
+                'albums': '创建专辑',
+                'materials': '发布资料'
+            };
+            
+            if (shopDetailChartInstance) {
+                shopDetailChartInstance.destroy();
+            }
+            
+            shopDetailChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: chartMonths,
+                    datasets: [
+                        {
+                            label: '当前年份',
+                            data: chartData,
+                            borderColor: '#667eea',
+                            backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                            borderWidth: 2,
+                            pointRadius: 5,
+                            pointBackgroundColor: currentPointColors,
+                            pointBorderColor: '#667eea',
+                            pointBorderWidth: 2,
+                            tension: 0.4,
+                            fill: false
+                        },
+                        {
+                            label: '去年同期',
+                            data: lastYearData,
+                            borderColor: '#ff9c6e',
+                            backgroundColor: 'rgba(255, 156, 110, 0.1)',
+                            borderWidth: 2,
+                            pointRadius: 5,
+                            pointBackgroundColor: lastYearPointColors,
+                            pointBorderColor: '#ff9c6e',
+                            pointBorderWidth: 2,
+                            tension: 0.4,
+                            fill: false,
+                            borderDash: [5, 5]
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 15,
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        datalabels: {
+                            display: true,
+                            anchor: 'end',
+                            align: 'top',
+                            offset: 8,
+                            font: {
+                                size: 11,
+                                weight: 'bold'
+                            },
+                            color: function(context) {
+                                return context.dataset.borderColor;
+                            },
+                            formatter: function(value) {
+                                if (value === null || value === undefined) {
+                                    return '';
+                                }
+                                return value.toFixed(0);
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#f0f0f0'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    const unitMap = {
+                                        'consumption': '元',
+                                        'income': '元',
+                                        'albums': '个',
+                                        'materials': '份'
+                                    };
+                                    return value.toLocaleString() + (unitMap[dimension] || '');
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                },
+                plugins: [
+                    {
+                        id: 'customDataLabels',
+                        afterDatasetsDraw(chart) {
+                            const ctx = chart.ctx;
+                            chart.data.datasets.forEach((dataset, datasetIndex) => {
+                                const meta = chart.getDatasetMeta(datasetIndex);
+                                if (!meta.hidden) {
+                                    meta.data.forEach((element, index) => {
+                                        const value = dataset.data[index];
+                                        if (value !== null && value !== undefined) {
+                                            const x = element.x;
+                                            const y = element.y - 15;
+                                            
+                                            ctx.fillStyle = dataset.borderColor;
+                                            ctx.font = 'bold 11px Arial';
+                                            ctx.textAlign = 'center';
+                                            ctx.textBaseline = 'bottom';
+                                            ctx.fillText(value.toFixed(0), x, y);
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                    }
+                ]
+            });
+        }
+
+        // 点击模态框外部关闭
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('shopModal');
+            if (event.target === modal) {
+                closeShopModal();
+            }
+        });
+
+        document.getElementById('monthSelect').addEventListener('change', renderDashboard);
+
+        init();
+    </script>
+</body>
+</html>
