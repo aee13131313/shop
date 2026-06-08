@@ -254,11 +254,11 @@
         }
 
         .comparison-change.up {
-            color: #ff6b6b;
+            color: #52c41a;
         }
 
         .comparison-change.down {
-            color: #52c41a;
+            color: #ff6b6b;
         }
 
         .summary-right {
@@ -454,13 +454,13 @@
         }
 
         .data-change-inline.up {
-            color: #ff6b6b;
-            background: rgba(255, 107, 107, 0.08);
+            color: #52c41a;
+            background: rgba(82, 196, 26, 0.08);
         }
 
         .data-change-inline.down {
-            color: #52c41a;
-            background: rgba(82, 196, 26, 0.08);
+            color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.08);
         }
 
         .no-data {
@@ -790,10 +790,36 @@
     </div>
 
     <script src="shop_data.js"></script>
+    <script src="shop_data26.6.4.js"></script>
     <script>
         let trendChartInstance = null;
         let currentMonthlyData = null;
         let currentMonth = null;
+
+        // 合并两个数据源
+        const mergedShopData = { ...shopMonthlyData };
+        if (typeof shopMonthlyData26 !== 'undefined') {
+            Object.keys(shopMonthlyData26).forEach(shopId => {
+                const newShop = shopMonthlyData26[shopId];
+                if (mergedShopData[shopId]) {
+                    // 如果商家已存在，合并数据
+                    const existingShop = mergedShopData[shopId];
+                    
+                    ['consumption', 'income', 'albums', 'materials'].forEach(metric => {
+                        if (newShop[metric]) {
+                            if (!existingShop[metric]) {
+                                existingShop[metric] = { months: [], values: [] };
+                            }
+                            existingShop[metric].months = [...(existingShop[metric].months || []), ...(newShop[metric].months || [])];
+                            existingShop[metric].values = [...(existingShop[metric].values || []), ...(newShop[metric].values || [])];
+                        }
+                    });
+                } else {
+                    // 如果商家不存在，直接添加
+                    mergedShopData[shopId] = newShop;
+                }
+            });
+        }
 
         function init() {
             populateSelects();
@@ -806,7 +832,7 @@
 
         function populateSelects() {
             const months = new Set();
-            Object.values(shopMonthlyData).forEach(shop => {
+            Object.values(mergedShopData).forEach(shop => {
                 if (shop.consumption && shop.consumption.months) {
                     shop.consumption.months.forEach(m => {
                         if (m && m.trim()) {
@@ -848,7 +874,7 @@
 
             if (!selectedMonth) {
                 const months = new Set();
-                Object.values(shopMonthlyData).forEach(shop => {
+                Object.values(mergedShopData).forEach(shop => {
                     if (shop.consumption && shop.consumption.months) {
                         shop.consumption.months.forEach(m => {
                             if (m && m.trim()) {
@@ -883,7 +909,7 @@
             currentMonth = month;
 
             let allConsumption = 0, allIncome = 0, allAlbums = 0, allMaterials = 0;
-            Object.values(shopMonthlyData).forEach(shop => {
+            Object.values(mergedShopData).forEach(shop => {
                 if (shop.consumption && shop.consumption.months) {
                     const idx = shop.consumption.months.indexOf(month);
                     if (idx !== -1) {
@@ -911,7 +937,7 @@
             });
 
             let months = [];
-            const firstShop = Object.values(shopMonthlyData)[0];
+            const firstShop = Object.values(mergedShopData)[0];
             if (firstShop && firstShop.consumption && firstShop.consumption.months) {
                 months = firstShop.consumption.months;
             }
@@ -925,7 +951,7 @@
 
             months.forEach((m, idx) => {
                 let mc = 0, mi = 0, ma = 0, mm = 0;
-                Object.values(shopMonthlyData).forEach(shop => {
+                Object.values(mergedShopData).forEach(shop => {
                     if (shop.consumption && shop.consumption.values) {
                         mc += shop.consumption.values[idx] || 0;
                     }
@@ -1035,11 +1061,11 @@
             `;
 
             const shopList = [];
-            const currentIdx = Object.values(shopMonthlyData)[0].consumption.months.indexOf(month);
+            const currentIdx = Object.values(mergedShopData)[0].consumption.months.indexOf(month);
             const lastMonthIdx = currentIdx - 1;
             const lastYearIdx = currentIdx - 12;
 
-            Object.entries(shopMonthlyData).forEach(([shopId, shop]) => {
+            Object.entries(mergedShopData).forEach(([shopId, shop]) => {
                 if (shop.consumption && shop.consumption.months) {
                     const idx = shop.consumption.months.indexOf(month);
                     if (idx !== -1) {
@@ -1268,7 +1294,7 @@
             btn.classList.add('active');
 
             const currentIdx = currentMonthlyData.consumption.findIndex((_, idx) => {
-                const m = Object.values(shopMonthlyData)[0].consumption.months[idx];
+                const m = Object.values(mergedShopData)[0].consumption.months[idx];
                 return m === currentMonth;
             });
 
@@ -1429,7 +1455,7 @@
             if (trendChartInstance) {
                 // 获取所有月份
                 let months = [];
-                const firstShop = Object.values(shopMonthlyData)[0];
+                const firstShop = Object.values(mergedShopData)[0];
                 if (firstShop && firstShop.consumption && firstShop.consumption.months) {
                     months = firstShop.consumption.months;
                 }
@@ -1485,7 +1511,7 @@
             modalTitle.textContent = `${shopName} - 数据趋势`;
             
             // 获取商家数据
-            currentShopData = shopMonthlyData[shopId];
+            currentShopData = mergedShopData[shopId];
             
             if (!currentShopData) {
                 alert('未找到商家数据');
