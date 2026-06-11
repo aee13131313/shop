@@ -1427,6 +1427,29 @@
                                     size: 12
                                 }
                             }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(context) {
+                                    let titles = [];
+                                    context.forEach(function(item) {
+                                        const label = item.dataset.label || '';
+                                        const month = item.label;
+                                        let displayMonth = month;
+                                        if (label === '去年同期') {
+                                            const year = parseInt(month.substring(0, 4));
+                                            displayMonth = (year - 1) + month.substring(4);
+                                        }
+                                        titles.push(displayMonth);
+                                    });
+                                    return [...new Set(titles)].join(' / ');
+                                },
+                                label: function(context) {
+                                    const label = context.dataset.label || '';
+                                    const value = context.parsed.y;
+                                    return `${label}: ${value !== null ? value.toLocaleString() : ''}`;
+                                }
+                            }
                         }
                     },
                     scales: {
@@ -1805,6 +1828,29 @@
                                 padding: 15,
                                 font: {
                                     size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(context) {
+                                    let titles = [];
+                                    context.forEach(function(item) {
+                                        const label = item.dataset.label || '';
+                                        const month = item.label;
+                                        let displayMonth = month;
+                                        if (label === '去年同期') {
+                                            const year = parseInt(month.substring(0, 4));
+                                            displayMonth = (year - 1) + month.substring(4);
+                                        }
+                                        titles.push(displayMonth);
+                                    });
+                                    return [...new Set(titles)].join(' / ');
+                                },
+                                label: function(context) {
+                                    const label = context.dataset.label || '';
+                                    const value = context.parsed.y;
+                                    return `${label}: ${value !== null ? value.toLocaleString() : ''}`;
                                 }
                             }
                         },
