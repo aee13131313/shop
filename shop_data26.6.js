@@ -1,8 +1,8 @@
 ﻿const shopMonthlyData2606 = {
   "518382": {
     "name": "东北书局",
-    "consumption": { "months": ["2026年6月"], "values": [3046.22] },
-    "income": { "months": ["2026年6月"], "values": [2132.35] },
+    "consumption": { "months": ["2026年6月"], "values": [3303.02] },
+    "income": { "months": ["2026年6月"], "values": [2312.11] },
     "albums": { "months": ["2026年6月"], "values": [17] },
     "materials": { "months": ["2026年6月"], "values": [17] }
   },
@@ -22,8 +22,8 @@
   },
   "518061": {
     "name": "梁山金大文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [3214.2] },
-    "income": { "months": ["2026年6月"], "values": [2249.94] },
+    "consumption": { "months": ["2026年6月"], "values": [3308] },
+    "income": { "months": ["2026年6月"], "values": [2315.6] },
     "albums": { "months": ["2026年6月"], "values": [59] },
     "materials": { "months": ["2026年6月"], "values": [1769] }
   },
@@ -36,15 +36,15 @@
   },
   "516849": {
     "name": "湖北省智慧源文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1157.5] },
-    "income": { "months": ["2026年6月"], "values": [810.25] },
+    "consumption": { "months": ["2026年6月"], "values": [1287.5] },
+    "income": { "months": ["2026年6月"], "values": [901.25] },
     "albums": { "months": ["2026年6月"], "values": [3] },
     "materials": { "months": ["2026年6月"], "values": [47] }
   },
   "516315": {
     "name": "安徽庐阳书社图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [494.8] },
-    "income": { "months": ["2026年6月"], "values": [346.36] },
+    "consumption": { "months": ["2026年6月"], "values": [525] },
+    "income": { "months": ["2026年6月"], "values": [367.5] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -64,15 +64,15 @@
   },
   "514867": {
     "name": "拾光树文化",
-    "consumption": { "months": ["2026年6月"], "values": [10771.2] },
-    "income": { "months": ["2026年6月"], "values": [7539.74] },
+    "consumption": { "months": ["2026年6月"], "values": [11096] },
+    "income": { "months": ["2026年6月"], "values": [7767.1] },
     "albums": { "months": ["2026年6月"], "values": [72] },
     "materials": { "months": ["2026年6月"], "values": [1925] }
   },
   "514602": {
     "name": "武汉思颖琪文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [270] },
-    "income": { "months": ["2026年6月"], "values": [189] },
+    "consumption": { "months": ["2026年6月"], "values": [324] },
+    "income": { "months": ["2026年6月"], "values": [226.8] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -92,29 +92,29 @@
   },
   "514603": {
     "name": "陕西明天教育科技发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1317] },
-    "income": { "months": ["2026年6月"], "values": [921.9] },
+    "consumption": { "months": ["2026年6月"], "values": [1379] },
+    "income": { "months": ["2026年6月"], "values": [965.3] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "514606": {
     "name": "河南理想图书发行有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [170] },
-    "income": { "months": ["2026年6月"], "values": [119] },
+    "consumption": { "months": ["2026年6月"], "values": [197] },
+    "income": { "months": ["2026年6月"], "values": [137.9] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "513170": {
     "name": "阜阳市三味书屋教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [64.8] },
-    "income": { "months": ["2026年6月"], "values": [45.36] },
+    "consumption": { "months": ["2026年6月"], "values": [67.8] },
+    "income": { "months": ["2026年6月"], "values": [47.46] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "513172": {
     "name": "沈阳刷考点教辅图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2950] },
-    "income": { "months": ["2026年6月"], "values": [2065] },
+    "consumption": { "months": ["2026年6月"], "values": [3122.6] },
+    "income": { "months": ["2026年6月"], "values": [2185.82] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -127,8 +127,8 @@
   },
   "513171": {
     "name": "安徽迈进文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [452] },
-    "income": { "months": ["2026年6月"], "values": [316.4] },
+    "consumption": { "months": ["2026年6月"], "values": [461.6] },
+    "income": { "months": ["2026年6月"], "values": [323.12] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -141,29 +141,29 @@
   },
   "512825": {
     "name": "湖南华文出版传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [243] },
-    "income": { "months": ["2026年6月"], "values": [170.1] },
+    "consumption": { "months": ["2026年6月"], "values": [263.8] },
+    "income": { "months": ["2026年6月"], "values": [184.66] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "511590": {
     "name": "衡水天枢教育发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [6569.2] },
-    "income": { "months": ["2026年6月"], "values": [4598.44] },
+    "consumption": { "months": ["2026年6月"], "values": [7425.2] },
+    "income": { "months": ["2026年6月"], "values": [5197.64] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [36] }
   },
   "511775": {
     "name": "陕西文韬文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [25108.34] },
-    "income": { "months": ["2026年6月"], "values": [17575.82] },
+    "consumption": { "months": ["2026年6月"], "values": [26204.64] },
+    "income": { "months": ["2026年6月"], "values": [18343.23] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [413] }
   },
   "511294": {
     "name": "河南晨轩文化科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [5215.2] },
-    "income": { "months": ["2026年6月"], "values": [3650.64] },
+    "consumption": { "months": ["2026年6月"], "values": [5377.2] },
+    "income": { "months": ["2026年6月"], "values": [3764.04] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [950] }
   },
@@ -190,15 +190,15 @@
   },
   "511593": {
     "name": "天津东岛传媒科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [437.6] },
-    "income": { "months": ["2026年6月"], "values": [306.32] },
+    "consumption": { "months": ["2026年6月"], "values": [448.6] },
+    "income": { "months": ["2026年6月"], "values": [314.02] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "511776": {
     "name": "驭书斋（天津）文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2126.8] },
-    "income": { "months": ["2026年6月"], "values": [1488.76] },
+    "consumption": { "months": ["2026年6月"], "values": [2239.8] },
+    "income": { "months": ["2026年6月"], "values": [1567.86] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -211,15 +211,15 @@
   },
   "510374": {
     "name": "河北行知文化传媒有限责任公司",
-    "consumption": { "months": ["2026年6月"], "values": [62.4] },
-    "income": { "months": ["2026年6月"], "values": [43.68] },
+    "consumption": { "months": ["2026年6月"], "values": [70.4] },
+    "income": { "months": ["2026年6月"], "values": [49.28] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [4] }
   },
   "507430": {
     "name": "广州习阅文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2543.8] },
-    "income": { "months": ["2026年6月"], "values": [1780.66] },
+    "consumption": { "months": ["2026年6月"], "values": [2657.8] },
+    "income": { "months": ["2026年6月"], "values": [1860.46] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -232,15 +232,15 @@
   },
   "506294": {
     "name": "慧课教育科技（广东）有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [154.2] },
-    "income": { "months": ["2026年6月"], "values": [107.94] },
+    "consumption": { "months": ["2026年6月"], "values": [158.2] },
+    "income": { "months": ["2026年6月"], "values": [110.74] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "905437": {
     "name": "梁山高智传媒科技中心（个体工商户）",
-    "consumption": { "months": ["2026年6月"], "values": [11545.92] },
-    "income": { "months": ["2026年6月"], "values": [8082.13] },
+    "consumption": { "months": ["2026年6月"], "values": [11822.12] },
+    "income": { "months": ["2026年6月"], "values": [8275.47] },
     "albums": { "months": ["2026年6月"], "values": [27] },
     "materials": { "months": ["2026年6月"], "values": [225] }
   },
@@ -253,8 +253,8 @@
   },
   "505618": {
     "name": "盛世华阅文化传媒（北京）有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1213.16] },
-    "income": { "months": ["2026年6月"], "values": [849.2] },
+    "consumption": { "months": ["2026年6月"], "values": [1255.16] },
+    "income": { "months": ["2026年6月"], "values": [878.6] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [20] }
   },
@@ -274,15 +274,15 @@
   },
   "503992": {
     "name": "济宁长歌文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [16356.02] },
-    "income": { "months": ["2026年6月"], "values": [11449.12] },
+    "consumption": { "months": ["2026年6月"], "values": [17810.02] },
+    "income": { "months": ["2026年6月"], "values": [12466.92] },
     "albums": { "months": ["2026年6月"], "values": [29] },
     "materials": { "months": ["2026年6月"], "values": [511] }
   },
   "503080": {
     "name": "福建人民出版社有限责任公司",
-    "consumption": { "months": ["2026年6月"], "values": [776.9] },
-    "income": { "months": ["2026年6月"], "values": [543.83] },
+    "consumption": { "months": ["2026年6月"], "values": [860.3] },
+    "income": { "months": ["2026年6月"], "values": [602.21] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [77] }
   },
@@ -295,15 +295,15 @@
   },
   "504622": {
     "name": "江苏有为咨询有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [36] },
-    "income": { "months": ["2026年6月"], "values": [25.2] },
+    "consumption": { "months": ["2026年6月"], "values": [45] },
+    "income": { "months": ["2026年6月"], "values": [31.5] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "504623": {
     "name": "山东开心图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1172.5] },
-    "income": { "months": ["2026年6月"], "values": [820.75] },
+    "consumption": { "months": ["2026年6月"], "values": [1185.3] },
+    "income": { "months": ["2026年6月"], "values": [829.71] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -316,8 +316,8 @@
   },
   "503079": {
     "name": "郑州启明星书业有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [571.8] },
-    "income": { "months": ["2026年6月"], "values": [400.26] },
+    "consumption": { "months": ["2026年6月"], "values": [574.8] },
+    "income": { "months": ["2026年6月"], "values": [402.36] },
     "albums": { "months": ["2026年6月"], "values": [8] },
     "materials": { "months": ["2026年6月"], "values": [169] }
   },
@@ -344,15 +344,15 @@
   },
   "502056": {
     "name": "潍坊振发文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [8500.6] },
-    "income": { "months": ["2026年6月"], "values": [5950.42] },
+    "consumption": { "months": ["2026年6月"], "values": [10273.7] },
+    "income": { "months": ["2026年6月"], "values": [7191.59] },
     "albums": { "months": ["2026年6月"], "values": [21] },
     "materials": { "months": ["2026年6月"], "values": [177] }
   },
   "501922": {
     "name": "杭州盛世久顺文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [529] },
-    "income": { "months": ["2026年6月"], "values": [370.3] },
+    "consumption": { "months": ["2026年6月"], "values": [535.2] },
+    "income": { "months": ["2026年6月"], "values": [374.64] },
     "albums": { "months": ["2026年6月"], "values": [8] },
     "materials": { "months": ["2026年6月"], "values": [427] }
   },
@@ -379,8 +379,8 @@
   },
   "501571": {
     "name": "河北鸿硕教育科技有有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [890.4] },
-    "income": { "months": ["2026年6月"], "values": [623.28] },
+    "consumption": { "months": ["2026年6月"], "values": [974.4] },
+    "income": { "months": ["2026年6月"], "values": [682.08] },
     "albums": { "months": ["2026年6月"], "values": [2] },
     "materials": { "months": ["2026年6月"], "values": [18] }
   },
@@ -407,8 +407,8 @@
   },
   "501236": {
     "name": "宁波涌济文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1646.2] },
-    "income": { "months": ["2026年6月"], "values": [1152.22] },
+    "consumption": { "months": ["2026年6月"], "values": [1790.6] },
+    "income": { "months": ["2026年6月"], "values": [1253.3] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [1] }
   },
@@ -421,15 +421,15 @@
   },
   "501234": {
     "name": "安徽振乾文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [283.4] },
-    "income": { "months": ["2026年6月"], "values": [198.38] },
+    "consumption": { "months": ["2026年6月"], "values": [297.4] },
+    "income": { "months": ["2026年6月"], "values": [208.18] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500775": {
     "name": "杭州润游图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [330] },
-    "income": { "months": ["2026年6月"], "values": [231] },
+    "consumption": { "months": ["2026年6月"], "values": [338] },
+    "income": { "months": ["2026年6月"], "values": [236.6] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -491,8 +491,8 @@
   },
   "500745": {
     "name": "深圳天骄文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [12495.84] },
-    "income": { "months": ["2026年6月"], "values": [8747.06] },
+    "consumption": { "months": ["2026年6月"], "values": [12945.64] },
+    "income": { "months": ["2026年6月"], "values": [9061.92] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [21] }
   },
@@ -526,8 +526,8 @@
   },
   "500731": {
     "name": "陕西奔跑加文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [3013.08] },
-    "income": { "months": ["2026年6月"], "values": [2109.15] },
+    "consumption": { "months": ["2026年6月"], "values": [3242.08] },
+    "income": { "months": ["2026年6月"], "values": [2269.45] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [35] }
   },
@@ -596,50 +596,50 @@
   },
   "500696": {
     "name": "山东面向未来图书销售有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [12760.5] },
-    "income": { "months": ["2026年6月"], "values": [8927.37] },
+    "consumption": { "months": ["2026年6月"], "values": [12951.79] },
+    "income": { "months": ["2026年6月"], "values": [9061.18] },
     "albums": { "months": ["2026年6月"], "values": [6] },
     "materials": { "months": ["2026年6月"], "values": [302] }
   },
   "800011": {
     "name": "宁波出版社有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2342.54] },
-    "income": { "months": ["2026年6月"], "values": [1639.75] },
+    "consumption": { "months": ["2026年6月"], "values": [2387.83] },
+    "income": { "months": ["2026年6月"], "values": [1671.45] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [103] }
   },
   "900000": {
     "name": "长安学林文具用品经销部",
-    "consumption": { "months": ["2026年6月"], "values": [2897.6] },
-    "income": { "months": ["2026年6月"], "values": [2028.32] },
+    "consumption": { "months": ["2026年6月"], "values": [3037.6] },
+    "income": { "months": ["2026年6月"], "values": [2126.32] },
     "albums": { "months": ["2026年6月"], "values": [2] },
     "materials": { "months": ["2026年6月"], "values": [143] }
   },
   "500109": {
     "name": "时代京版（北京）文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [60] },
-    "income": { "months": ["2026年6月"], "values": [42] },
+    "consumption": { "months": ["2026年6月"], "values": [66] },
+    "income": { "months": ["2026年6月"], "values": [46.2] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500243": {
     "name": "众相原创文化传播陕西有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [7243.4] },
-    "income": { "months": ["2026年6月"], "values": [5070.32] },
+    "consumption": { "months": ["2026年6月"], "values": [7498.4] },
+    "income": { "months": ["2026年6月"], "values": [5248.82] },
     "albums": { "months": ["2026年6月"], "values": [2] },
     "materials": { "months": ["2026年6月"], "values": [71] }
   },
   "500546": {
     "name": "众望益飞教育科技（北京）有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [6011.4] },
-    "income": { "months": ["2026年6月"], "values": [4207.98] },
+    "consumption": { "months": ["2026年6月"], "values": [6484.3] },
+    "income": { "months": ["2026年6月"], "values": [4539.01] },
     "albums": { "months": ["2026年6月"], "values": [16] },
     "materials": { "months": ["2026年6月"], "values": [697] }
   },
   "500547": {
     "name": "广州星达数码科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [596.74] },
-    "income": { "months": ["2026年6月"], "values": [417.71] },
+    "consumption": { "months": ["2026年6月"], "values": [610.74] },
+    "income": { "months": ["2026年6月"], "values": [427.51] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -652,8 +652,8 @@
   },
   "500170": {
     "name": "山东一得文化科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [829] },
-    "income": { "months": ["2026年6月"], "values": [580.3] },
+    "consumption": { "months": ["2026年6月"], "values": [1039] },
+    "income": { "months": ["2026年6月"], "values": [727.3] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [28] }
   },
@@ -666,8 +666,8 @@
   },
   "500169": {
     "name": "合肥市徽文文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [100.6] },
-    "income": { "months": ["2026年6月"], "values": [70.42] },
+    "consumption": { "months": ["2026年6月"], "values": [103.6] },
+    "income": { "months": ["2026年6月"], "values": [72.52] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -680,22 +680,22 @@
   },
   "500168": {
     "name": "梁山学易优文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [227] },
-    "income": { "months": ["2026年6月"], "values": [158.9] },
+    "consumption": { "months": ["2026年6月"], "values": [231] },
+    "income": { "months": ["2026年6月"], "values": [161.7] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500545": {
     "name": "三圆文化传媒广州有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [82.95] },
-    "income": { "months": ["2026年6月"], "values": [58.06] },
+    "consumption": { "months": ["2026年6月"], "values": [107.45] },
+    "income": { "months": ["2026年6月"], "values": [75.21] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500241": {
     "name": "山东舵手网络科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1578.2] },
-    "income": { "months": ["2026年6月"], "values": [1104.74] },
+    "consumption": { "months": ["2026年6月"], "values": [1997.6] },
+    "income": { "months": ["2026年6月"], "values": [1398.32] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -834,8 +834,8 @@
   },
   "500601": {
     "name": "河南爱智慧文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [0] },
-    "income": { "months": ["2026年6月"], "values": [0] },
+    "consumption": { "months": ["2026年6月"], "values": [0.1] },
+    "income": { "months": ["2026年6月"], "values": [0.07] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -897,8 +897,8 @@
   },
   "800010": {
     "name": "江苏凤凰电子音像出版社有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [169.5] },
-    "income": { "months": ["2026年6月"], "values": [84.75] },
+    "consumption": { "months": ["2026年6月"], "values": [174] },
+    "income": { "months": ["2026年6月"], "values": [87] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -960,43 +960,43 @@
   },
   "500408": {
     "name": "河北华冠图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [3608.5] },
-    "income": { "months": ["2026年6月"], "values": [2525.95] },
+    "consumption": { "months": ["2026年6月"], "values": [3834.5] },
+    "income": { "months": ["2026年6月"], "values": [2684.15] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500410": {
     "name": "湖北时代卓锦文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [15312.41] },
-    "income": { "months": ["2026年6月"], "values": [10718.63] },
+    "consumption": { "months": ["2026年6月"], "values": [15561.01] },
+    "income": { "months": ["2026年6月"], "values": [10892.65] },
     "albums": { "months": ["2026年6月"], "values": [32] },
     "materials": { "months": ["2026年6月"], "values": [853] }
   },
   "500269": {
     "name": "梁山辉煌图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2489.22] },
-    "income": { "months": ["2026年6月"], "values": [1742.45] },
+    "consumption": { "months": ["2026年6月"], "values": [2516.22] },
+    "income": { "months": ["2026年6月"], "values": [1761.35] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [58] }
   },
   "500283": {
     "name": "哈尔滨勤为径图书经销有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [19686.02] },
-    "income": { "months": ["2026年6月"], "values": [13780.19] },
+    "consumption": { "months": ["2026年6月"], "values": [20338.62] },
+    "income": { "months": ["2026年6月"], "values": [14237.01] },
     "albums": { "months": ["2026年6月"], "values": [69] },
     "materials": { "months": ["2026年6月"], "values": [1487] }
   },
   "500377": {
     "name": "山东泰斗文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [17046.44] },
-    "income": { "months": ["2026年6月"], "values": [11932.39] },
+    "consumption": { "months": ["2026年6月"], "values": [17738.54] },
+    "income": { "months": ["2026年6月"], "values": [12416.86] },
     "albums": { "months": ["2026年6月"], "values": [10] },
     "materials": { "months": ["2026年6月"], "values": [455] }
   },
   "500188": {
     "name": "山东绿卡教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [5651.1] },
-    "income": { "months": ["2026年6月"], "values": [2825.55] },
+    "consumption": { "months": ["2026年6月"], "values": [5907.5] },
+    "income": { "months": ["2026年6月"], "values": [2953.75] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [65] }
   },
@@ -1009,50 +1009,50 @@
   },
   "500176": {
     "name": "中山市思而优文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [6328.56] },
-    "income": { "months": ["2026年6月"], "values": [4429.99] },
+    "consumption": { "months": ["2026年6月"], "values": [6521.36] },
+    "income": { "months": ["2026年6月"], "values": [4564.95] },
     "albums": { "months": ["2026年6月"], "values": [1] },
     "materials": { "months": ["2026年6月"], "values": [10] }
   },
   "800000": {
     "name": "文心出版社有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1402.2] },
-    "income": { "months": ["2026年6月"], "values": [981.54] },
+    "consumption": { "months": ["2026年6月"], "values": [1419.2] },
+    "income": { "months": ["2026年6月"], "values": [993.44] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500298": {
     "name": "湖南天一文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1233.7] },
-    "income": { "months": ["2026年6月"], "values": [863.59] },
+    "consumption": { "months": ["2026年6月"], "values": [1325.7] },
+    "income": { "months": ["2026年6月"], "values": [927.99] },
     "albums": { "months": ["2026年6月"], "values": [1] },
     "materials": { "months": ["2026年6月"], "values": [3] }
   },
   "500438": {
     "name": "北京以凡文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1072.22] },
-    "income": { "months": ["2026年6月"], "values": [750.55] },
+    "consumption": { "months": ["2026年6月"], "values": [1096.22] },
+    "income": { "months": ["2026年6月"], "values": [767.35] },
     "albums": { "months": ["2026年6月"], "values": [3] },
     "materials": { "months": ["2026年6月"], "values": [37] }
   },
   "500271": {
     "name": "河北红对勾文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1616.3] },
-    "income": { "months": ["2026年6月"], "values": [1131.36] },
+    "consumption": { "months": ["2026年6月"], "values": [1683.7] },
+    "income": { "months": ["2026年6月"], "values": [1178.54] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500280": {
     "name": "洛阳大爱图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [393.6] },
-    "income": { "months": ["2026年6月"], "values": [275.52] },
+    "consumption": { "months": ["2026年6月"], "values": [408.6] },
+    "income": { "months": ["2026年6月"], "values": [286.02] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500266": {
     "name": "南京新汇泽文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [83.4] },
-    "income": { "months": ["2026年6月"], "values": [58.38] },
+    "consumption": { "months": ["2026年6月"], "values": [86.4] },
+    "income": { "months": ["2026年6月"], "values": [60.48] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -1065,8 +1065,8 @@
   },
   "500592": {
     "name": "河南木子文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1348.8] },
-    "income": { "months": ["2026年6月"], "values": [944.16] },
+    "consumption": { "months": ["2026年6月"], "values": [1360.8] },
+    "income": { "months": ["2026年6月"], "values": [952.56] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [41] }
   },
@@ -1086,8 +1086,8 @@
   },
   "500397": {
     "name": "潍坊博雅图文制作有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [224] },
-    "income": { "months": ["2026年6月"], "values": [156.8] },
+    "consumption": { "months": ["2026年6月"], "values": [230] },
+    "income": { "months": ["2026年6月"], "values": [161] },
     "albums": { "months": ["2026年6月"], "values": [5] },
     "materials": { "months": ["2026年6月"], "values": [161] }
   },
@@ -1107,8 +1107,8 @@
   },
   "500351": {
     "name": "武汉奥赛王文化有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [226.8] },
-    "income": { "months": ["2026年6月"], "values": [158.76] },
+    "consumption": { "months": ["2026年6月"], "values": [229.8] },
+    "income": { "months": ["2026年6月"], "values": [160.86] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -1156,8 +1156,8 @@
   },
   "500292": {
     "name": "河南晨勤文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [20] },
-    "income": { "months": ["2026年6月"], "values": [14] },
+    "consumption": { "months": ["2026年6月"], "values": [30] },
+    "income": { "months": ["2026年6月"], "values": [21] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -1436,43 +1436,43 @@
   },
   "500661": {
     "name": "江苏壹学知道文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [12089.27] },
-    "income": { "months": ["2026年6月"], "values": [8462.32] },
+    "consumption": { "months": ["2026年6月"], "values": [12339.07] },
+    "income": { "months": ["2026年6月"], "values": [8637.18] },
     "albums": { "months": ["2026年6月"], "values": [35] },
     "materials": { "months": ["2026年6月"], "values": [1111] }
   },
   "500309": {
     "name": "武汉睿芯教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [4833.14] },
-    "income": { "months": ["2026年6月"], "values": [3383.15] },
+    "consumption": { "months": ["2026年6月"], "values": [4931.74] },
+    "income": { "months": ["2026年6月"], "values": [3452.17] },
     "albums": { "months": ["2026年6月"], "values": [1] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500323": {
     "name": "浙江良品图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1127.2] },
-    "income": { "months": ["2026年6月"], "values": [789.04] },
+    "consumption": { "months": ["2026年6月"], "values": [1156.2] },
+    "income": { "months": ["2026年6月"], "values": [809.34] },
     "albums": { "months": ["2026年6月"], "values": [16] },
     "materials": { "months": ["2026年6月"], "values": [81] }
   },
   "500356": {
     "name": "北京龙腾八方文化有限责任公司",
-    "consumption": { "months": ["2026年6月"], "values": [760.72] },
-    "income": { "months": ["2026年6月"], "values": [380.36] },
+    "consumption": { "months": ["2026年6月"], "values": [770.72] },
+    "income": { "months": ["2026年6月"], "values": [385.36] },
     "albums": { "months": ["2026年6月"], "values": [13] },
     "materials": { "months": ["2026年6月"], "values": [116] }
   },
   "500163": {
     "name": "大连众里文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [563.84] },
-    "income": { "months": ["2026年6月"], "values": [394.68] },
+    "consumption": { "months": ["2026年6月"], "values": [566.84] },
+    "income": { "months": ["2026年6月"], "values": [396.78] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "800020": {
     "name": "武汉华大鸿图文化发展有限责任公司",
-    "consumption": { "months": ["2026年6月"], "values": [1243.2] },
-    "income": { "months": ["2026年6月"], "values": [870.11] },
+    "consumption": { "months": ["2026年6月"], "values": [1254.2] },
+    "income": { "months": ["2026年6月"], "values": [877.81] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -1485,15 +1485,15 @@
   },
   "500645": {
     "name": "山东世纪育才文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [72.7] },
-    "income": { "months": ["2026年6月"], "values": [50.89] },
+    "consumption": { "months": ["2026年6月"], "values": [78.7] },
+    "income": { "months": ["2026年6月"], "values": [55.09] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500644": {
     "name": "广东文晖文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2548.26] },
-    "income": { "months": ["2026年6月"], "values": [1783.78] },
+    "consumption": { "months": ["2026年6月"], "values": [2616.26] },
+    "income": { "months": ["2026年6月"], "values": [1831.38] },
     "albums": { "months": ["2026年6月"], "values": [29] },
     "materials": { "months": ["2026年6月"], "values": [221] }
   },
@@ -1506,8 +1506,8 @@
   },
   "500362": {
     "name": "成都林鸿创客图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [24] },
-    "income": { "months": ["2026年6月"], "values": [16.8] },
+    "consumption": { "months": ["2026年6月"], "values": [27] },
+    "income": { "months": ["2026年6月"], "values": [18.9] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -1527,64 +1527,64 @@
   },
   "500261": {
     "name": "山东正禾大教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [13341.22] },
-    "income": { "months": ["2026年6月"], "values": [9338.8] },
+    "consumption": { "months": ["2026年6月"], "values": [13764.02] },
+    "income": { "months": ["2026年6月"], "values": [9634.76] },
     "albums": { "months": ["2026年6月"], "values": [111] },
     "materials": { "months": ["2026年6月"], "values": [1350] }
   },
   "500179": {
     "name": "洛阳朝霞文化股份有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [45183.9] },
-    "income": { "months": ["2026年6月"], "values": [31628.64] },
+    "consumption": { "months": ["2026年6月"], "values": [46183.3] },
+    "income": { "months": ["2026年6月"], "values": [32328.22] },
     "albums": { "months": ["2026年6月"], "values": [14] },
     "materials": { "months": ["2026年6月"], "values": [3504] }
   },
   "500312": {
     "name": "江苏通典文化传媒集团有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [12625.96] },
-    "income": { "months": ["2026年6月"], "values": [8838.14] },
+    "consumption": { "months": ["2026年6月"], "values": [12891.26] },
+    "income": { "months": ["2026年6月"], "values": [9023.85] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [591] }
   },
   "500232": {
     "name": "洛阳品学文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [20132.36] },
-    "income": { "months": ["2026年6月"], "values": [14092.58] },
+    "consumption": { "months": ["2026年6月"], "values": [21024.46] },
+    "income": { "months": ["2026年6月"], "values": [14717.05] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [1448] }
   },
   "500299": {
     "name": "山东众旺汇金教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [3268.1] },
-    "income": { "months": ["2026年6月"], "values": [2287.67] },
+    "consumption": { "months": ["2026年6月"], "values": [3624.1] },
+    "income": { "months": ["2026年6月"], "values": [2536.87] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [21] }
   },
   "500318": {
     "name": "湖北盈未来教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [11107.93] },
-    "income": { "months": ["2026年6月"], "values": [5553.83] },
+    "consumption": { "months": ["2026年6月"], "values": [12018.13] },
+    "income": { "months": ["2026年6月"], "values": [6008.9] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [61] }
   },
   "500189": {
     "name": "陕西炼书客图书策划有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [11012.86] },
-    "income": { "months": ["2026年6月"], "values": [7709] },
+    "consumption": { "months": ["2026年6月"], "values": [11457.46] },
+    "income": { "months": ["2026年6月"], "values": [8020.22] },
     "albums": { "months": ["2026年6月"], "values": [19] },
     "materials": { "months": ["2026年6月"], "values": [191] }
   },
   "500629": {
     "name": "山东荣景教育科技股份有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [3543.06] },
-    "income": { "months": ["2026年6月"], "values": [2480.14] },
+    "consumption": { "months": ["2026年6月"], "values": [3628.06] },
+    "income": { "months": ["2026年6月"], "values": [2539.64] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [2] }
   },
   "500660": {
     "name": "洛阳可馨文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [4995.5] },
-    "income": { "months": ["2026年6月"], "values": [3496.84] },
+    "consumption": { "months": ["2026年6月"], "values": [5226.8] },
+    "income": { "months": ["2026年6月"], "values": [3658.75] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [366] }
   },
@@ -1597,8 +1597,8 @@
   },
   "500210": {
     "name": "河北斗米文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [12829.99] },
-    "income": { "months": ["2026年6月"], "values": [8980.98] },
+    "consumption": { "months": ["2026年6月"], "values": [13038.39] },
+    "income": { "months": ["2026年6月"], "values": [9126.86] },
     "albums": { "months": ["2026年6月"], "values": [3] },
     "materials": { "months": ["2026年6月"], "values": [88] }
   },
@@ -1611,43 +1611,43 @@
   },
   "500656": {
     "name": "洛阳芸熙文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [14192.81] },
-    "income": { "months": ["2026年6月"], "values": [9934.94] },
+    "consumption": { "months": ["2026年6月"], "values": [14362.41] },
+    "income": { "months": ["2026年6月"], "values": [10053.66] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [1524] }
   },
   "500330": {
     "name": "河南鹤翔图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1079.96] },
-    "income": { "months": ["2026年6月"], "values": [755.97] },
+    "consumption": { "months": ["2026年6月"], "values": [1097.96] },
+    "income": { "months": ["2026年6月"], "values": [768.57] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500633": {
     "name": "广州教与学文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [4037.8] },
-    "income": { "months": ["2026年6月"], "values": [1615.12] },
+    "consumption": { "months": ["2026年6月"], "values": [4135.8] },
+    "income": { "months": ["2026年6月"], "values": [1654.32] },
     "albums": { "months": ["2026年6月"], "values": [1] },
     "materials": { "months": ["2026年6月"], "values": [10] }
   },
   "500478": {
     "name": "湖北猎豹教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [417.1] },
-    "income": { "months": ["2026年6月"], "values": [291.97] },
+    "consumption": { "months": ["2026年6月"], "values": [425.1] },
+    "income": { "months": ["2026年6月"], "values": [297.57] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500617": {
     "name": "理想众望教育科技（北京）有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [334.8] },
-    "income": { "months": ["2026年6月"], "values": [234.36] },
+    "consumption": { "months": ["2026年6月"], "values": [337.8] },
+    "income": { "months": ["2026年6月"], "values": [236.46] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500602": {
     "name": "洛阳云鹏文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [537.78] },
-    "income": { "months": ["2026年6月"], "values": [376.43] },
+    "consumption": { "months": ["2026年6月"], "values": [543.78] },
+    "income": { "months": ["2026年6月"], "values": [380.63] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -1660,29 +1660,29 @@
   },
   "500224": {
     "name": "北京众和永泰文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1131.2] },
-    "income": { "months": ["2026年6月"], "values": [791.84] },
+    "consumption": { "months": ["2026年6月"], "values": [1138] },
+    "income": { "months": ["2026年6月"], "values": [796.6] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [204] }
   },
   "500609": {
     "name": "呼和浩特市经纬方舟文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1824.12] },
-    "income": { "months": ["2026年6月"], "values": [1276.88] },
+    "consumption": { "months": ["2026年6月"], "values": [1921.92] },
+    "income": { "months": ["2026年6月"], "values": [1345.34] },
     "albums": { "months": ["2026年6月"], "values": [1] },
     "materials": { "months": ["2026年6月"], "values": [5] }
   },
   "500314": {
     "name": "长沙零起点文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [625.2] },
-    "income": { "months": ["2026年6月"], "values": [437.64] },
+    "consumption": { "months": ["2026年6月"], "values": [665] },
+    "income": { "months": ["2026年6月"], "values": [465.5] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500229": {
     "name": "幼狮文化创意（山东）有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [101.7] },
-    "income": { "months": ["2026年6月"], "values": [71.19] },
+    "consumption": { "months": ["2026年6月"], "values": [109.7] },
+    "income": { "months": ["2026年6月"], "values": [76.79] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -1695,22 +1695,22 @@
   },
   "500164": {
     "name": "太原四季文化图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2337.44] },
-    "income": { "months": ["2026年6月"], "values": [1636.2] },
+    "consumption": { "months": ["2026年6月"], "values": [2471.54] },
+    "income": { "months": ["2026年6月"], "values": [1730.07] },
     "albums": { "months": ["2026年6月"], "values": [6] },
     "materials": { "months": ["2026年6月"], "values": [17] }
   },
   "500622": {
     "name": "库课文化科技股份有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [85] },
-    "income": { "months": ["2026年6月"], "values": [59.5] },
+    "consumption": { "months": ["2026年6月"], "values": [91] },
+    "income": { "months": ["2026年6月"], "values": [63.7] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "650349": {
     "name": "中学生数理化高中版编辑部",
-    "consumption": { "months": ["2026年6月"], "values": [117.4] },
-    "income": { "months": ["2026年6月"], "values": [58.7] },
+    "consumption": { "months": ["2026年6月"], "values": [133.4] },
+    "income": { "months": ["2026年6月"], "values": [66.7] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -1730,15 +1730,15 @@
   },
   "500596": {
     "name": "山西智想文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1814.4] },
-    "income": { "months": ["2026年6月"], "values": [1270.08] },
+    "consumption": { "months": ["2026年6月"], "values": [1875.8] },
+    "income": { "months": ["2026年6月"], "values": [1313.06] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [51] }
   },
   "500202": {
     "name": "河南领扬文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [464.8] },
-    "income": { "months": ["2026年6月"], "values": [325.36] },
+    "consumption": { "months": ["2026年6月"], "values": [468.8] },
+    "income": { "months": ["2026年6月"], "values": [328.16] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -1751,8 +1751,8 @@
   },
   "500258": {
     "name": "陕西翰文图书精典发行有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [54.6] },
-    "income": { "months": ["2026年6月"], "values": [38.22] },
+    "consumption": { "months": ["2026年6月"], "values": [55.6] },
+    "income": { "months": ["2026年6月"], "values": [38.92] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -1765,15 +1765,15 @@
   },
   "500597": {
     "name": "广州书友图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [0] },
-    "income": { "months": ["2026年6月"], "values": [0] },
+    "consumption": { "months": ["2026年6月"], "values": [10.8] },
+    "income": { "months": ["2026年6月"], "values": [7.56] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500618": {
     "name": "河南智熊文化科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [23] },
-    "income": { "months": ["2026年6月"], "values": [16.1] },
+    "consumption": { "months": ["2026年6月"], "values": [26] },
+    "income": { "months": ["2026年6月"], "values": [18.2] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -2178,8 +2178,8 @@
   },
   "500286": {
     "name": "湖南佩佩教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [0] },
-    "income": { "months": ["2026年6月"], "values": [0] },
+    "consumption": { "months": ["2026年6月"], "values": [4] },
+    "income": { "months": ["2026年6月"], "values": [2.8] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -2213,8 +2213,8 @@
   },
   "800017": {
     "name": "文化发展出版社有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [0] },
-    "income": { "months": ["2026年6月"], "values": [0] },
+    "consumption": { "months": ["2026年6月"], "values": [0.9] },
+    "income": { "months": ["2026年6月"], "values": [0.45] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -2318,57 +2318,57 @@
   },
   "900005": {
     "name": "南京市玄武区书生教育信息咨询工作室",
-    "consumption": { "months": ["2026年6月"], "values": [3579.04] },
-    "income": { "months": ["2026年6月"], "values": [2505.31] },
+    "consumption": { "months": ["2026年6月"], "values": [3657.04] },
+    "income": { "months": ["2026年6月"], "values": [2559.91] },
     "albums": { "months": ["2026年6月"], "values": [25] },
     "materials": { "months": ["2026年6月"], "values": [465] }
   },
   "500447": {
     "name": "北京五洲时代天华文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [3161.28] },
-    "income": { "months": ["2026年6月"], "values": [2212.89] },
+    "consumption": { "months": ["2026年6月"], "values": [3319.58] },
+    "income": { "months": ["2026年6月"], "values": [2323.7] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "800030": {
     "name": "北方联合出版传媒（集团）股份有限公司分公司",
-    "consumption": { "months": ["2026年6月"], "values": [4091.68] },
-    "income": { "months": ["2026年6月"], "values": [2864.17] },
+    "consumption": { "months": ["2026年6月"], "values": [4192.08] },
+    "income": { "months": ["2026年6月"], "values": [2934.45] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [298] }
   },
   "500480": {
     "name": "陕西助力文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1187.2] },
-    "income": { "months": ["2026年6月"], "values": [831.04] },
+    "consumption": { "months": ["2026年6月"], "values": [1225.2] },
+    "income": { "months": ["2026年6月"], "values": [857.64] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [123] }
   },
   "500184": {
     "name": "金华市合创展教育图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [520.9] },
-    "income": { "months": ["2026年6月"], "values": [364.63] },
+    "consumption": { "months": ["2026年6月"], "values": [540.1] },
+    "income": { "months": ["2026年6月"], "values": [378.07] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500426": {
     "name": "湖北瀚海书航文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1260.2] },
-    "income": { "months": ["2026年6月"], "values": [882.14] },
+    "consumption": { "months": ["2026年6月"], "values": [1274.2] },
+    "income": { "months": ["2026年6月"], "values": [891.94] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [72] }
   },
   "500494": {
     "name": "山东学缘教育图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1201.4] },
-    "income": { "months": ["2026年6月"], "values": [840.98] },
+    "consumption": { "months": ["2026年6月"], "values": [1413] },
+    "income": { "months": ["2026年6月"], "values": [989.1] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500535": {
     "name": "北京知行健教育咨询有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [113] },
-    "income": { "months": ["2026年6月"], "values": [79.1] },
+    "consumption": { "months": ["2026年6月"], "values": [113.9] },
+    "income": { "months": ["2026年6月"], "values": [79.73] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -2381,15 +2381,15 @@
   },
   "500528": {
     "name": "北京伯乐马文化发展中心",
-    "consumption": { "months": ["2026年6月"], "values": [863.6] },
-    "income": { "months": ["2026年6月"], "values": [604.52] },
+    "consumption": { "months": ["2026年6月"], "values": [1184.8] },
+    "income": { "months": ["2026年6月"], "values": [829.36] },
     "albums": { "months": ["2026年6月"], "values": [1] },
     "materials": { "months": ["2026年6月"], "values": [26] }
   },
   "500540": {
     "name": "安徽大图文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1502] },
-    "income": { "months": ["2026年6月"], "values": [1051.4] },
+    "consumption": { "months": ["2026年6月"], "values": [1582] },
+    "income": { "months": ["2026年6月"], "values": [1107.4] },
     "albums": { "months": ["2026年6月"], "values": [1] },
     "materials": { "months": ["2026年6月"], "values": [28] }
   },
@@ -2402,22 +2402,22 @@
   },
   "500433": {
     "name": "河北敬文图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [35] },
-    "income": { "months": ["2026年6月"], "values": [24.5] },
+    "consumption": { "months": ["2026年6月"], "values": [39] },
+    "income": { "months": ["2026年6月"], "values": [27.3] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500386": {
     "name": "华版（北京）文化有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [36] },
-    "income": { "months": ["2026年6月"], "values": [25.2] },
+    "consumption": { "months": ["2026年6月"], "values": [40.8] },
+    "income": { "months": ["2026年6月"], "values": [28.56] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "800026": {
     "name": "北京世纪东方科技发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [148.5] },
-    "income": { "months": ["2026年6月"], "values": [103.95] },
+    "consumption": { "months": ["2026年6月"], "values": [153.5] },
+    "income": { "months": ["2026年6月"], "values": [107.45] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -2437,8 +2437,8 @@
   },
   "500579": {
     "name": "潍坊神龙图书发行有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [3171.02] },
-    "income": { "months": ["2026年6月"], "values": [2219.71] },
+    "consumption": { "months": ["2026年6月"], "values": [3281.72] },
+    "income": { "months": ["2026年6月"], "values": [2297.2] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [242] }
   },
@@ -2458,148 +2458,148 @@
   },
   "500573": {
     "name": "山东接力教育集团有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [4697.64] },
-    "income": { "months": ["2026年6月"], "values": [3288.31] },
+    "consumption": { "months": ["2026年6月"], "values": [4855.04] },
+    "income": { "months": ["2026年6月"], "values": [3398.49] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500285": {
     "name": "山东一帆融媒教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [9742.55] },
-    "income": { "months": ["2026年6月"], "values": [6819.71] },
+    "consumption": { "months": ["2026年6月"], "values": [10408.35] },
+    "income": { "months": ["2026年6月"], "values": [7285.77] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [381] }
   },
   "500505": {
     "name": "湖北千里万卷教育科技有限责任公司",
-    "consumption": { "months": ["2026年6月"], "values": [4372.8] },
-    "income": { "months": ["2026年6月"], "values": [3060.95] },
+    "consumption": { "months": ["2026年6月"], "values": [4415.8] },
+    "income": { "months": ["2026年6月"], "values": [3091.05] },
     "albums": { "months": ["2026年6月"], "values": [9] },
     "materials": { "months": ["2026年6月"], "values": [206] }
   },
   "500272": {
     "name": "山东中辰文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [19716.86] },
-    "income": { "months": ["2026年6月"], "values": [13801.61] },
+    "consumption": { "months": ["2026年6月"], "values": [19900.36] },
+    "income": { "months": ["2026年6月"], "values": [13930.06] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [1547] }
   },
   "500415": {
     "name": "山东一本图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [7639.6] },
-    "income": { "months": ["2026年6月"], "values": [5347.72] },
+    "consumption": { "months": ["2026年6月"], "values": [7791.4] },
+    "income": { "months": ["2026年6月"], "values": [5453.98] },
     "albums": { "months": ["2026年6月"], "values": [16] },
     "materials": { "months": ["2026年6月"], "values": [313] }
   },
   "500187": {
     "name": "荆州市南宇图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1959.88] },
-    "income": { "months": ["2026年6月"], "values": [1371.91] },
+    "consumption": { "months": ["2026年6月"], "values": [2022.68] },
+    "income": { "months": ["2026年6月"], "values": [1415.87] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500514": {
     "name": "河北考源书业有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1456] },
-    "income": { "months": ["2026年6月"], "values": [1019.2] },
+    "consumption": { "months": ["2026年6月"], "values": [1473.8] },
+    "income": { "months": ["2026年6月"], "values": [1031.66] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500576": {
     "name": "郑州培优教育图书发行有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [4177.8] },
-    "income": { "months": ["2026年6月"], "values": [2924.46] },
+    "consumption": { "months": ["2026年6月"], "values": [4262.5] },
+    "income": { "months": ["2026年6月"], "values": [2983.75] },
     "albums": { "months": ["2026年6月"], "values": [11] },
     "materials": { "months": ["2026年6月"], "values": [293] }
   },
   "500389": {
     "name": "河北万卷文化有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2018.4] },
-    "income": { "months": ["2026年6月"], "values": [1412.81] },
+    "consumption": { "months": ["2026年6月"], "values": [2157.8] },
+    "income": { "months": ["2026年6月"], "values": [1510.39] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500482": {
     "name": "山东仁心齐教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1561.45] },
-    "income": { "months": ["2026年6月"], "values": [1092.89] },
+    "consumption": { "months": ["2026年6月"], "values": [1834.25] },
+    "income": { "months": ["2026年6月"], "values": [1283.85] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500177": {
     "name": "河北志东图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [849.6] },
-    "income": { "months": ["2026年6月"], "values": [594.72] },
+    "consumption": { "months": ["2026年6月"], "values": [873.2] },
+    "income": { "months": ["2026年6月"], "values": [611.24] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500442": {
     "name": "梁山鑫宇文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1376.76] },
-    "income": { "months": ["2026年6月"], "values": [963.72] },
+    "consumption": { "months": ["2026年6月"], "values": [1403.36] },
+    "income": { "months": ["2026年6月"], "values": [982.34] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500214": {
     "name": "四川多能教育书业有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2290.1] },
-    "income": { "months": ["2026年6月"], "values": [1145.05] },
+    "consumption": { "months": ["2026年6月"], "values": [2375.9] },
+    "income": { "months": ["2026年6月"], "values": [1187.95] },
     "albums": { "months": ["2026年6月"], "values": [11] },
     "materials": { "months": ["2026年6月"], "values": [317] }
   },
   "500201": {
     "name": "河南鼎成教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1468.72] },
-    "income": { "months": ["2026年6月"], "values": [734.36] },
+    "consumption": { "months": ["2026年6月"], "values": [1517.72] },
+    "income": { "months": ["2026年6月"], "values": [758.86] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [84] }
   },
   "500288": {
     "name": "滨州市众邦图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [665.1] },
-    "income": { "months": ["2026年6月"], "values": [465.57] },
+    "consumption": { "months": ["2026年6月"], "values": [668.1] },
+    "income": { "months": ["2026年6月"], "values": [467.67] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500500": {
     "name": "山东正大图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [5489.12] },
-    "income": { "months": ["2026年6月"], "values": [3842.34] },
+    "consumption": { "months": ["2026年6月"], "values": [5733.92] },
+    "income": { "months": ["2026年6月"], "values": [4013.7] },
     "albums": { "months": ["2026年6月"], "values": [32] },
     "materials": { "months": ["2026年6月"], "values": [662] }
   },
   "500440": {
     "name": "山东优易练图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [736.36] },
-    "income": { "months": ["2026年6月"], "values": [515.27] },
+    "consumption": { "months": ["2026年6月"], "values": [757.36] },
+    "income": { "months": ["2026年6月"], "values": [529.97] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500416": {
     "name": "南京考优文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [835] },
-    "income": { "months": ["2026年6月"], "values": [584.5] },
+    "consumption": { "months": ["2026年6月"], "values": [844.6] },
+    "income": { "months": ["2026年6月"], "values": [591.22] },
     "albums": { "months": ["2026年6月"], "values": [2] },
     "materials": { "months": ["2026年6月"], "values": [25] }
   },
   "500277": {
     "name": "梁山智源数字化科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2544.2] },
-    "income": { "months": ["2026年6月"], "values": [1780.94] },
+    "consumption": { "months": ["2026年6月"], "values": [2744.2] },
+    "income": { "months": ["2026年6月"], "values": [1920.94] },
     "albums": { "months": ["2026年6月"], "values": [1] },
     "materials": { "months": ["2026年6月"], "values": [27] }
   },
   "500527": {
     "name": "万向思维国际教育科技集团（西安）股份有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [44.6] },
-    "income": { "months": ["2026年6月"], "values": [31.22] },
+    "consumption": { "months": ["2026年6月"], "values": [46.6] },
+    "income": { "months": ["2026年6月"], "values": [32.62] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "800031": {
     "name": "吉林教育出版社有限责任公司",
-    "consumption": { "months": ["2026年6月"], "values": [740.5] },
-    "income": { "months": ["2026年6月"], "values": [518.35] },
+    "consumption": { "months": ["2026年6月"], "values": [792.3] },
+    "income": { "months": ["2026年6月"], "values": [554.61] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [47] }
   },
@@ -2612,8 +2612,8 @@
   },
   "500259": {
     "name": "河南昕金立文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2587] },
-    "income": { "months": ["2026年6月"], "values": [1810.9] },
+    "consumption": { "months": ["2026年6月"], "values": [3039.4] },
+    "income": { "months": ["2026年6月"], "values": [2127.58] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [144] }
   },
@@ -2633,43 +2633,43 @@
   },
   "500583": {
     "name": "梁山博圣图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [529] },
-    "income": { "months": ["2026年6月"], "values": [370.3] },
+    "consumption": { "months": ["2026年6月"], "values": [535.8] },
+    "income": { "months": ["2026年6月"], "values": [375.06] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500465": {
     "name": "太原市后土文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [115.2] },
-    "income": { "months": ["2026年6月"], "values": [80.64] },
+    "consumption": { "months": ["2026年6月"], "values": [118.2] },
+    "income": { "months": ["2026年6月"], "values": [82.74] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500452": {
     "name": "合肥亚泰嘉和文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [68.1] },
-    "income": { "months": ["2026年6月"], "values": [47.67] },
+    "consumption": { "months": ["2026年6月"], "values": [80.9] },
+    "income": { "months": ["2026年6月"], "values": [56.63] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500509": {
     "name": "河北启光教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1061.28] },
-    "income": { "months": ["2026年6月"], "values": [742.81] },
+    "consumption": { "months": ["2026年6月"], "values": [1063.28] },
+    "income": { "months": ["2026年6月"], "values": [744.21] },
     "albums": { "months": ["2026年6月"], "values": [1] },
     "materials": { "months": ["2026年6月"], "values": [9] }
   },
   "500582": {
     "name": "志恒文化传媒（北京）有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [103] },
-    "income": { "months": ["2026年6月"], "values": [72.1] },
+    "consumption": { "months": ["2026年6月"], "values": [110] },
+    "income": { "months": ["2026年6月"], "values": [77] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500423": {
     "name": "山西晋一教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [340.9] },
-    "income": { "months": ["2026年6月"], "values": [238.62] },
+    "consumption": { "months": ["2026年6月"], "values": [343.9] },
+    "income": { "months": ["2026年6月"], "values": [240.72] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -2682,8 +2682,8 @@
   },
   "500530": {
     "name": "北京点石新语文文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [454.94] },
-    "income": { "months": ["2026年6月"], "values": [318.45] },
+    "consumption": { "months": ["2026年6月"], "values": [471.94] },
+    "income": { "months": ["2026年6月"], "values": [330.35] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -2724,8 +2724,8 @@
   },
   "500552": {
     "name": "滨州儒乾文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [130.5] },
-    "income": { "months": ["2026年6月"], "values": [91.35] },
+    "consumption": { "months": ["2026年6月"], "values": [159.5] },
+    "income": { "months": ["2026年6月"], "values": [111.65] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -2920,8 +2920,8 @@
   },
   "500580": {
     "name": "河南宣雨教育图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [205.4] },
-    "income": { "months": ["2026年6月"], "values": [102.7] },
+    "consumption": { "months": ["2026年6月"], "values": [215.2] },
+    "income": { "months": ["2026年6月"], "values": [107.6] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -3123,50 +3123,50 @@
   },
   "500339": {
     "name": "山东鼎鑫书业有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [14161.26] },
-    "income": { "months": ["2026年6月"], "values": [12372.69] },
+    "consumption": { "months": ["2026年6月"], "values": [14562.96] },
+    "income": { "months": ["2026年6月"], "values": [12653.88] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [1449] }
   },
   "500162": {
     "name": "郑州荣恒图书发行有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [21018.39] },
-    "income": { "months": ["2026年6月"], "values": [14712.5] },
+    "consumption": { "months": ["2026年6月"], "values": [21621.59] },
+    "income": { "months": ["2026年6月"], "values": [15134.74] },
     "albums": { "months": ["2026年6月"], "values": [101] },
     "materials": { "months": ["2026年6月"], "values": [2277] }
   },
   "500161": {
     "name": "西安玖典文创科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2384.7] },
-    "income": { "months": ["2026年6月"], "values": [1669.29] },
+    "consumption": { "months": ["2026年6月"], "values": [2467.7] },
+    "income": { "months": ["2026年6月"], "values": [1727.39] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [18] }
   },
   "500313": {
     "name": "山东瀚海书韵教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [277] },
-    "income": { "months": ["2026年6月"], "values": [193.9] },
+    "consumption": { "months": ["2026年6月"], "values": [305] },
+    "income": { "months": ["2026年6月"], "values": [213.5] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500345": {
     "name": "广州翰庭文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [97.4] },
-    "income": { "months": ["2026年6月"], "values": [68.18] },
+    "consumption": { "months": ["2026年6月"], "values": [99.4] },
+    "income": { "months": ["2026年6月"], "values": [69.58] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500297": {
     "name": "河南文轩文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [206.2] },
-    "income": { "months": ["2026年6月"], "values": [144.34] },
+    "consumption": { "months": ["2026年6月"], "values": [208.2] },
+    "income": { "months": ["2026年6月"], "values": [145.74] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500254": {
     "name": "成都康达书业有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [44.4] },
-    "income": { "months": ["2026年6月"], "values": [31.08] },
+    "consumption": { "months": ["2026年6月"], "values": [52.4] },
+    "income": { "months": ["2026年6月"], "values": [36.68] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -3179,15 +3179,15 @@
   },
   "500393": {
     "name": "湖北海韵文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [9] },
-    "income": { "months": ["2026年6月"], "values": [6.3] },
+    "consumption": { "months": ["2026年6月"], "values": [10] },
+    "income": { "months": ["2026年6月"], "values": [7] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500425": {
     "name": "昆明书屯文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1.5] },
-    "income": { "months": ["2026年6月"], "values": [1.05] },
+    "consumption": { "months": ["2026年6月"], "values": [5.5] },
+    "income": { "months": ["2026年6月"], "values": [3.85] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -3242,85 +3242,85 @@
   },
   "500172": {
     "name": "陕西灰犀牛图书策划有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [38017.76] },
-    "income": { "months": ["2026年6月"], "values": [26612.19] },
+    "consumption": { "months": ["2026年6月"], "values": [40097.46] },
+    "income": { "months": ["2026年6月"], "values": [28067.98] },
     "albums": { "months": ["2026年6月"], "values": [7] },
     "materials": { "months": ["2026年6月"], "values": [440] }
   },
   "500376": {
     "name": "江西宇恒文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [10183.08] },
-    "income": { "months": ["2026年6月"], "values": [7128.15] },
+    "consumption": { "months": ["2026年6月"], "values": [10462.28] },
+    "income": { "months": ["2026年6月"], "values": [7323.59] },
     "albums": { "months": ["2026年6月"], "values": [29] },
     "materials": { "months": ["2026年6月"], "values": [447] }
   },
   "500173": {
     "name": "河北金卷教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [5884.5] },
-    "income": { "months": ["2026年6月"], "values": [4119.15] },
+    "consumption": { "months": ["2026年6月"], "values": [6167.7] },
+    "income": { "months": ["2026年6月"], "values": [4317.39] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [25] }
   },
   "500379": {
     "name": "南京经纶文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [3643.4] },
-    "income": { "months": ["2026年6月"], "values": [2550.38] },
+    "consumption": { "months": ["2026年6月"], "values": [3729.4] },
+    "income": { "months": ["2026年6月"], "values": [2610.58] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [112] }
   },
   "500409": {
     "name": "湖北世纪国华文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [7139.7] },
-    "income": { "months": ["2026年6月"], "values": [4997.79] },
+    "consumption": { "months": ["2026年6月"], "values": [7201.3] },
+    "income": { "months": ["2026年6月"], "values": [5040.91] },
     "albums": { "months": ["2026年6月"], "values": [6] },
     "materials": { "months": ["2026年6月"], "values": [121] }
   },
   "500343": {
     "name": "山东佰鸿壹铭教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [2075.8] },
-    "income": { "months": ["2026年6月"], "values": [1453.06] },
+    "consumption": { "months": ["2026年6月"], "values": [2264] },
+    "income": { "months": ["2026年6月"], "values": [1584.8] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500370": {
     "name": "江西铭文文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [3927.3] },
-    "income": { "months": ["2026年6月"], "values": [2749.11] },
+    "consumption": { "months": ["2026年6月"], "values": [4067.3] },
+    "income": { "months": ["2026年6月"], "values": [2847.11] },
     "albums": { "months": ["2026年6月"], "values": [9] },
     "materials": { "months": ["2026年6月"], "values": [338] }
   },
   "500490": {
     "name": "《数理报》社有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [7405.7] },
-    "income": { "months": ["2026年6月"], "values": [3702.85] },
+    "consumption": { "months": ["2026年6月"], "values": [7440.7] },
+    "income": { "months": ["2026年6月"], "values": [3720.35] },
     "albums": { "months": ["2026年6月"], "values": [25] },
     "materials": { "months": ["2026年6月"], "values": [278] }
   },
   "500304": {
     "name": "洛阳九歌文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [8727.2] },
-    "income": { "months": ["2026年6月"], "values": [6109.04] },
+    "consumption": { "months": ["2026年6月"], "values": [8765.66] },
+    "income": { "months": ["2026年6月"], "values": [6135.96] },
     "albums": { "months": ["2026年6月"], "values": [102] },
     "materials": { "months": ["2026年6月"], "values": [1066] }
   },
   "500649": {
     "name": "梁山启智教育图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1757.7] },
-    "income": { "months": ["2026年6月"], "values": [1230.39] },
+    "consumption": { "months": ["2026年6月"], "values": [1883.5] },
+    "income": { "months": ["2026年6月"], "values": [1318.45] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [123] }
   },
   "500365": {
     "name": "天津市恒真文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [978.9] },
-    "income": { "months": ["2026年6月"], "values": [685.23] },
+    "consumption": { "months": ["2026年6月"], "values": [1003.7] },
+    "income": { "months": ["2026年6月"], "values": [702.59] },
     "albums": { "months": ["2026年6月"], "values": [7] },
     "materials": { "months": ["2026年6月"], "values": [218] }
   },
   "500526": {
     "name": "山东先德睿图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [449.7] },
-    "income": { "months": ["2026年6月"], "values": [314.79] },
+    "consumption": { "months": ["2026年6月"], "values": [456.9] },
+    "income": { "months": ["2026年6月"], "values": [319.83] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -3333,43 +3333,43 @@
   },
   "500363": {
     "name": "合肥皖智教育科技集团有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1186.3] },
-    "income": { "months": ["2026年6月"], "values": [830.4] },
+    "consumption": { "months": ["2026年6月"], "values": [1266.3] },
+    "income": { "months": ["2026年6月"], "values": [886.4] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500327": {
     "name": "河南清北之道教育研究院有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [111.6] },
-    "income": { "months": ["2026年6月"], "values": [78.12] },
+    "consumption": { "months": ["2026年6月"], "values": [114.6] },
+    "income": { "months": ["2026年6月"], "values": [80.22] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500454": {
     "name": "湖北金色花开文化有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [121.7] },
-    "income": { "months": ["2026年6月"], "values": [85.19] },
+    "consumption": { "months": ["2026年6月"], "values": [125.7] },
+    "income": { "months": ["2026年6月"], "values": [87.99] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500300": {
     "name": "山东名师文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [151.6] },
-    "income": { "months": ["2026年6月"], "values": [106.12] },
+    "consumption": { "months": ["2026年6月"], "values": [160.6] },
+    "income": { "months": ["2026年6月"], "values": [112.42] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500334": {
     "name": "山西唐文文化发展有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [569.75] },
-    "income": { "months": ["2026年6月"], "values": [398.8] },
+    "consumption": { "months": ["2026年6月"], "values": [577.75] },
+    "income": { "months": ["2026年6月"], "values": [404.4] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500390": {
     "name": "河北优盛文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [71.2] },
-    "income": { "months": ["2026年6月"], "values": [49.84] },
+    "consumption": { "months": ["2026年6月"], "values": [74.2] },
+    "income": { "months": ["2026年6月"], "values": [51.94] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -3382,29 +3382,29 @@
   },
   "800032": {
     "name": "京版北教文化传媒股份有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [117.9] },
-    "income": { "months": ["2026年6月"], "values": [82.35] },
+    "consumption": { "months": ["2026年6月"], "values": [118.9] },
+    "income": { "months": ["2026年6月"], "values": [83.05] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500525": {
     "name": "威海天梯图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [58] },
-    "income": { "months": ["2026年6月"], "values": [40.6] },
+    "consumption": { "months": ["2026年6月"], "values": [60] },
+    "income": { "months": ["2026年6月"], "values": [42] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500453": {
     "name": "福州学熙文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [41] },
-    "income": { "months": ["2026年6月"], "values": [28.7] },
+    "consumption": { "months": ["2026年6月"], "values": [47.4] },
+    "income": { "months": ["2026年6月"], "values": [33.18] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500329": {
     "name": "河北知灼图书销售有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [25] },
-    "income": { "months": ["2026年6月"], "values": [17.5] },
+    "consumption": { "months": ["2026年6月"], "values": [28.4] },
+    "income": { "months": ["2026年6月"], "values": [19.88] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -3459,8 +3459,8 @@
   },
   "500441": {
     "name": "陕西巨微图书文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [108.7] },
-    "income": { "months": ["2026年6月"], "values": [54.35] },
+    "consumption": { "months": ["2026年6月"], "values": [118.7] },
+    "income": { "months": ["2026年6月"], "values": [59.35] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -3571,50 +3571,50 @@
   },
   "500566": {
     "name": "山东金榜苑文化传媒有限责任公司",
-    "consumption": { "months": ["2026年6月"], "values": [11782.59] },
-    "income": { "months": ["2026年6月"], "values": [8247.71] },
+    "consumption": { "months": ["2026年6月"], "values": [12087.19] },
+    "income": { "months": ["2026年6月"], "values": [8460.93] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500553": {
     "name": "山东中联翰元教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [925.2] },
-    "income": { "months": ["2026年6月"], "values": [462.6] },
+    "consumption": { "months": ["2026年6月"], "values": [948.2] },
+    "income": { "months": ["2026年6月"], "values": [474.1] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500174": {
     "name": "山东强联文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1459.48] },
-    "income": { "months": ["2026年6月"], "values": [1021.63] },
+    "consumption": { "months": ["2026年6月"], "values": [1533.28] },
+    "income": { "months": ["2026年6月"], "values": [1073.29] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500489": {
     "name": "山东本真图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [891.52] },
-    "income": { "months": ["2026年6月"], "values": [624.06] },
+    "consumption": { "months": ["2026年6月"], "values": [942.32] },
+    "income": { "months": ["2026年6月"], "values": [659.62] },
     "albums": { "months": ["2026年6月"], "values": [14] },
     "materials": { "months": ["2026年6月"], "values": [694] }
   },
   "500253": {
     "name": "郑州天勤图书有限责任公司",
-    "consumption": { "months": ["2026年6月"], "values": [4416.3] },
-    "income": { "months": ["2026年6月"], "values": [3091.41] },
+    "consumption": { "months": ["2026年6月"], "values": [4656.3] },
+    "income": { "months": ["2026年6月"], "values": [3259.41] },
     "albums": { "months": ["2026年6月"], "values": [6] },
     "materials": { "months": ["2026年6月"], "values": [246] }
   },
   "800001": {
     "name": "新蕾出版社（天津）有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [38] },
-    "income": { "months": ["2026年6月"], "values": [19] },
+    "consumption": { "months": ["2026年6月"], "values": [41.2] },
+    "income": { "months": ["2026年6月"], "values": [20.6] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500531": {
     "name": "河北三品图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [0] },
-    "income": { "months": ["2026年6月"], "values": [0] },
+    "consumption": { "months": ["2026年6月"], "values": [2] },
+    "income": { "months": ["2026年6月"], "values": [1.4] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -3697,57 +3697,57 @@
   },
   "500507": {
     "name": "山东育博苑文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [8234.1] },
-    "income": { "months": ["2026年6月"], "values": [5763.87] },
+    "consumption": { "months": ["2026年6月"], "values": [8622.1] },
+    "income": { "months": ["2026年6月"], "values": [6035.47] },
     "albums": { "months": ["2026年6月"], "values": [4] },
     "materials": { "months": ["2026年6月"], "values": [70] }
   },
   "500538": {
     "name": "安徽木牍教育图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [3920.82] },
-    "income": { "months": ["2026年6月"], "values": [2744.56] },
+    "consumption": { "months": ["2026年6月"], "values": [4291.42] },
+    "income": { "months": ["2026年6月"], "values": [3003.98] },
     "albums": { "months": ["2026年6月"], "values": [11] },
     "materials": { "months": ["2026年6月"], "values": [139] }
   },
   "500572": {
     "name": "山东金太阳教育集团有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1589.9] },
-    "income": { "months": ["2026年6月"], "values": [1112.93] },
+    "consumption": { "months": ["2026年6月"], "values": [1665.3] },
+    "income": { "months": ["2026年6月"], "values": [1165.71] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500479": {
     "name": "山东智乐星教育科技股份有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [1715.6] },
-    "income": { "months": ["2026年6月"], "values": [1200.92] },
+    "consumption": { "months": ["2026年6月"], "values": [1791.2] },
+    "income": { "months": ["2026年6月"], "values": [1253.84] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500499": {
     "name": "湖北智慧万羽文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [4023.98] },
-    "income": { "months": ["2026年6月"], "values": [2816.78] },
+    "consumption": { "months": ["2026年6月"], "values": [4224.38] },
+    "income": { "months": ["2026年6月"], "values": [2957.06] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500570": {
     "name": "山东百川数字科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [243.7] },
-    "income": { "months": ["2026年6月"], "values": [121.85] },
+    "consumption": { "months": ["2026年6月"], "values": [247.7] },
+    "income": { "months": ["2026年6月"], "values": [123.85] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500464": {
     "name": "山东文丰苑图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [390.5] },
-    "income": { "months": ["2026年6月"], "values": [273.35] },
+    "consumption": { "months": ["2026年6月"], "values": [397.5] },
+    "income": { "months": ["2026年6月"], "values": [278.25] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "500488": {
     "name": "山东旭阳教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [129.6] },
-    "income": { "months": ["2026年6月"], "values": [90.72] },
+    "consumption": { "months": ["2026年6月"], "values": [141.8] },
+    "income": { "months": ["2026年6月"], "values": [99.26] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
@@ -3774,8 +3774,8 @@
   },
   "500534": {
     "name": "北京时代圣哲教育科技有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [4703.6] },
-    "income": { "months": ["2026年6月"], "values": [3292.51] },
+    "consumption": { "months": ["2026年6月"], "values": [4713.6] },
+    "income": { "months": ["2026年6月"], "values": [3299.51] },
     "albums": { "months": ["2026年6月"], "values": [14] },
     "materials": { "months": ["2026年6月"], "values": [255] }
   },
@@ -3949,22 +3949,22 @@
   },
   "520221": {
     "name": "梁山见山文化传播中心",
-    "consumption": { "months": ["2026年6月"], "values": [1875.2] },
-    "income": { "months": ["2026年6月"], "values": [1312.64] },
+    "consumption": { "months": ["2026年6月"], "values": [1993.6] },
+    "income": { "months": ["2026年6月"], "values": [1395.52] },
     "albums": { "months": ["2026年6月"], "values": [21] },
     "materials": { "months": ["2026年6月"], "values": [430] }
   },
   "520991": {
     "name": "郑州载望图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [493] },
-    "income": { "months": ["2026年6月"], "values": [345.1] },
+    "consumption": { "months": ["2026年6月"], "values": [533.4] },
+    "income": { "months": ["2026年6月"], "values": [373.38] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "520676": {
     "name": "广州市昭阳博悦文化传播有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [4505.1] },
-    "income": { "months": ["2026年6月"], "values": [3153.57] },
+    "consumption": { "months": ["2026年6月"], "values": [4668.3] },
+    "income": { "months": ["2026年6月"], "values": [3267.81] },
     "albums": { "months": ["2026年6月"], "values": [3] },
     "materials": { "months": ["2026年6月"], "values": [365] }
   },
@@ -3977,22 +3977,22 @@
   },
   "520481": {
     "name": "武汉鑫南泓文化传媒有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [245.8] },
-    "income": { "months": ["2026年6月"], "values": [172.06] },
+    "consumption": { "months": ["2026年6月"], "values": [250.8] },
+    "income": { "months": ["2026年6月"], "values": [175.56] },
     "albums": { "months": ["2026年6月"], "values": [7] },
     "materials": { "months": ["2026年6月"], "values": [32] }
   },
   "521916": {
     "name": "淄博汇智图书有限公司",
-    "consumption": { "months": ["2026年6月"], "values": [935.7] },
-    "income": { "months": ["2026年6月"], "values": [654.99] },
+    "consumption": { "months": ["2026年6月"], "values": [1015.3] },
+    "income": { "months": ["2026年6月"], "values": [710.71] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   },
   "522276": {
     "name": "北京先知时代文化中心",
-    "consumption": { "months": ["2026年6月"], "values": [122] },
-    "income": { "months": ["2026年6月"], "values": [85.4] },
+    "consumption": { "months": ["2026年6月"], "values": [240] },
+    "income": { "months": ["2026年6月"], "values": [168] },
     "albums": { "months": ["2026年6月"], "values": [0] },
     "materials": { "months": ["2026年6月"], "values": [0] }
   }
