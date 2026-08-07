@@ -810,78 +810,84 @@
     <script src="shop_data.js"></script>
     <script src="shop_data26.6.4.js"></script>
     <script src="shop_data26.6.js"></script>
+    <script src="shop_data26.7.js"></script>
     <script>
         let trendChartInstance = null;
         let currentMonthlyData = null;
         let currentMonth = null;
+        let currentMonths = null;
 
-        // 合并两个数据源
+        const metricKeys = ['consumption', 'income', 'albums', 'materials'];
+
+        function sortMonthsAsc(months) {
+            return Array.from(new Set(months)).sort((a, b) => {
+                const aMatch = a.match(/(\d+)年(\d+)月/);
+                const bMatch = b.match(/(\d+)年(\d+)月/);
+                if (!aMatch || !bMatch) return 0;
+                return (parseInt(aMatch[1]) - parseInt(bMatch[1])) || (parseInt(aMatch[2]) - parseInt(bMatch[2]));
+            });
+        }
+
+        function sortMonthsDesc(months) {
+            return sortMonthsAsc(months).reverse();
+        }
+
+        function getAllMonths() {
+            const months = [];
+            Object.values(mergedShopData).forEach(shop => {
+                metricKeys.forEach(metric => {
+                    if (shop[metric] && shop[metric].months) {
+                        months.push(...shop[metric].months.filter(m => m && m.trim()));
+                    }
+                });
+            });
+            return sortMonthsAsc(months);
+        }
+
+        function getMetricValue(shop, metric, month) {
+            if (!shop[metric] || !shop[metric].months) return 0;
+            const idx = shop[metric].months.indexOf(month);
+            return idx !== -1 ? shop[metric].values[idx] || 0 : 0;
+        }
+
+        function mergeDataSource(target, source) {
+            if (!source) return;
+
+            Object.keys(source).forEach(shopId => {
+                const newShop = source[shopId];
+                if (!target[shopId]) {
+                    target[shopId] = newShop;
+                    return;
+                }
+
+                const existingShop = target[shopId];
+                existingShop.name = existingShop.name || newShop.name;
+
+                metricKeys.forEach(metric => {
+                    if (!newShop[metric]) return;
+                    if (!existingShop[metric]) {
+                        existingShop[metric] = { months: [], values: [] };
+                    }
+
+                    const monthMap = new Map();
+                    existingShop[metric].months.forEach((month, idx) => {
+                        monthMap.set(month, existingShop[metric].values[idx]);
+                    });
+                    newShop[metric].months.forEach((month, idx) => {
+                        monthMap.set(month, newShop[metric].values[idx]);
+                    });
+
+                    const sortedMonths = sortMonthsAsc(monthMap.keys());
+                    existingShop[metric].months = sortedMonths;
+                    existingShop[metric].values = sortedMonths.map(month => monthMap.get(month));
+                });
+            });
+        }
+
         const mergedShopData = { ...shopMonthlyData };
-        if (typeof shopMonthlyData26 !== 'undefined') {
-            Object.keys(shopMonthlyData26).forEach(shopId => {
-                const newShop = shopMonthlyData26[shopId];
-                if (mergedShopData[shopId]) {
-                    // 如果商家已存在，合并数据
-                    const existingShop = mergedShopData[shopId];
-
-                    ['consumption', 'income', 'albums', 'materials'].forEach(metric => {
-                        if (newShop[metric]) {
-                            if (!existingShop[metric]) {
-                                existingShop[metric] = { months: [], values: [] };
-                            }
-
-                            // 使用Map来合并数据，确保同一月份只保留最新数据
-                            const monthMap = new Map();
-
-                            // 先添加现有数据
-                            existingShop[metric].months.forEach((month, idx) => {
-                                monthMap.set(month, existingShop[metric].values[idx]);
-                            });
-
-                            // 再添加新数据（会覆盖相同月份的数据）
-                            newShop[metric].months.forEach((month, idx) => {
-                                monthMap.set(month, newShop[metric].values[idx]);
-                            });
-
-                            // 转换回数组
-                            existingShop[metric].months = Array.from(monthMap.keys());
-                            existingShop[metric].values = Array.from(monthMap.values());
-                        }
-                    });
-                } else {
-                    // 如果商家不存在，直接添加
-                    mergedShopData[shopId] = newShop;
-                }
-            });
-        }
-
-        // 合并2026年6月数据
-        if (typeof shopMonthlyData2606 !== 'undefined') {
-            Object.keys(shopMonthlyData2606).forEach(shopId => {
-                const newShop = shopMonthlyData2606[shopId];
-                if (mergedShopData[shopId]) {
-                    const existingShop = mergedShopData[shopId];
-                    ['consumption', 'income', 'albums', 'materials'].forEach(metric => {
-                        if (newShop[metric]) {
-                            if (!existingShop[metric]) {
-                                existingShop[metric] = { months: [], values: [] };
-                            }
-                            const monthMap = new Map();
-                            existingShop[metric].months.forEach((month, idx) => {
-                                monthMap.set(month, existingShop[metric].values[idx]);
-                            });
-                            newShop[metric].months.forEach((month, idx) => {
-                                monthMap.set(month, newShop[metric].values[idx]);
-                            });
-                            existingShop[metric].months = Array.from(monthMap.keys());
-                            existingShop[metric].values = Array.from(monthMap.values());
-                        }
-                    });
-                } else {
-                    mergedShopData[shopId] = newShop;
-                }
-            });
-        }
+        mergeDataSource(mergedShopData, typeof shopMonthlyData26 !== 'undefined' ? shopMonthlyData26 : null);
+        mergeDataSource(mergedShopData, typeof shopMonthlyData2606 !== 'undefined' ? shopMonthlyData2606 : null);
+        mergeDataSource(mergedShopData, typeof shopMonthlyData2607 !== 'undefined' ? shopMonthlyData2607 : null);
 
         function init() {
             populateSelects();
@@ -893,34 +899,8 @@
         }
 
         function populateSelects() {
-            const months = new Set();
-            Object.values(mergedShopData).forEach(shop => {
-                if (shop.consumption && shop.consumption.months) {
-                    shop.consumption.months.forEach(m => {
-                        if (m && m.trim()) {
-                            months.add(m);
-                        }
-                    });
-                }
-            });
-
             const monthSelect = document.getElementById('monthSelect');
-            const sortedMonths = Array.from(months).sort((a, b) => {
-                const aMatch = a.match(/(\d+)年(\d+)月/);
-                const bMatch = b.match(/(\d+)年(\d+)月/);
-                
-                if (!aMatch || !bMatch) return 0;
-                
-                const aYear = parseInt(aMatch[1]);
-                const aMonth = parseInt(aMatch[2]);
-                const bYear = parseInt(bMatch[1]);
-                const bMonth = parseInt(bMatch[2]);
-                
-                if (aYear !== bYear) {
-                    return bYear - aYear;
-                }
-                return bMonth - aMonth;
-            });
+            const sortedMonths = sortMonthsDesc(getAllMonths());
 
             sortedMonths.forEach(month => {
                 const option = document.createElement('option');
@@ -935,33 +915,7 @@
             const content = document.getElementById('dashboardContent');
 
             if (!selectedMonth) {
-                const months = new Set();
-                Object.values(mergedShopData).forEach(shop => {
-                    if (shop.consumption && shop.consumption.months) {
-                        shop.consumption.months.forEach(m => {
-                            if (m && m.trim()) {
-                                months.add(m);
-                            }
-                        });
-                    }
-                });
-                const sortedMonths = Array.from(months).sort((a, b) => {
-                    const aMatch = a.match(/(\d+)年(\d+)月/);
-                    const bMatch = b.match(/(\d+)年(\d+)月/);
-                    
-                    if (!aMatch || !bMatch) return 0;
-                    
-                    const aYear = parseInt(aMatch[1]);
-                    const aMonth = parseInt(aMatch[2]);
-                    const bYear = parseInt(bMatch[1]);
-                    const bMonth = parseInt(bMatch[2]);
-                    
-                    if (aYear !== bYear) {
-                        return bYear - aYear;
-                    }
-                    return bMonth - aMonth;
-                });
-                selectedMonth = sortedMonths[0];
+                selectedMonth = sortMonthsDesc(getAllMonths())[0];
             }
 
             renderMonthlyDetail(selectedMonth, content);
@@ -998,11 +952,8 @@
                 }
             });
 
-            let months = [];
-            const firstShop = Object.values(mergedShopData)[0];
-            if (firstShop && firstShop.consumption && firstShop.consumption.months) {
-                months = firstShop.consumption.months;
-            }
+            let months = getAllMonths();
+            currentMonths = months;
 
             const monthlyData = {
                 consumption: [],
@@ -1011,21 +962,13 @@
                 materials: []
             };
 
-            months.forEach((m, idx) => {
+            months.forEach(m => {
                 let mc = 0, mi = 0, ma = 0, mm = 0;
                 Object.values(mergedShopData).forEach(shop => {
-                    if (shop.consumption && shop.consumption.values) {
-                        mc += shop.consumption.values[idx] || 0;
-                    }
-                    if (shop.income && shop.income.values) {
-                        mi += shop.income.values[idx] || 0;
-                    }
-                    if (shop.albums && shop.albums.values) {
-                        ma += shop.albums.values[idx] || 0;
-                    }
-                    if (shop.materials && shop.materials.values) {
-                        mm += shop.materials.values[idx] || 0;
-                    }
+                    mc += getMetricValue(shop, 'consumption', m);
+                    mi += getMetricValue(shop, 'income', m);
+                    ma += getMetricValue(shop, 'albums', m);
+                    mm += getMetricValue(shop, 'materials', m);
                 });
                 monthlyData.consumption.push(mc);
                 monthlyData.income.push(mi);
@@ -1038,7 +981,8 @@
             // 计算同比和环比
             const currentIdx = months.indexOf(month);
             const lastMonthIdx = currentIdx - 1;
-            const lastYearIdx = currentIdx - 12;
+            const lastYearMonth = month.replace(/^(\d+)年/, (_, year) => `${parseInt(year) - 1}年`);
+            const lastYearIdx = months.indexOf(lastYearMonth);
 
             const currentValue = monthlyData.consumption[currentIdx] || 0;
             const lastMonthValue = lastMonthIdx >= 0 ? monthlyData.consumption[lastMonthIdx] || 0 : 0;
@@ -1123,48 +1067,28 @@
             `;
 
             const shopList = [];
-            const currentIdx = Object.values(mergedShopData)[0].consumption.months.indexOf(month);
-            const lastMonthIdx = currentIdx - 1;
-            const lastYearIdx = currentIdx - 12;
+            const lastMonth = currentMonths[currentMonths.indexOf(month) - 1];
+            const lastYearMonth = month.replace(/^(\d+)年/, (_, year) => `${parseInt(year) - 1}年`);
 
             Object.entries(mergedShopData).forEach(([shopId, shop]) => {
-                if (shop.consumption && shop.consumption.months) {
-                    const idx = shop.consumption.months.indexOf(month);
-                    if (idx !== -1) {
-                        // 计算同比和环比
-                        const consumption = shop.consumption.values[idx] || 0;
-                        const consumptionLastMonth = lastMonthIdx >= 0 ? shop.consumption.values[lastMonthIdx] || 0 : 0;
-                        const consumptionLastYear = lastYearIdx >= 0 ? shop.consumption.values[lastYearIdx] || 0 : 0;
-
-                        const income = shop.income.values[idx] || 0;
-                        const incomeLastMonth = lastMonthIdx >= 0 ? shop.income.values[lastMonthIdx] || 0 : 0;
-                        const incomeLastYear = lastYearIdx >= 0 ? shop.income.values[lastYearIdx] || 0 : 0;
-
-                        const albums = shop.albums.values[idx] || 0;
-                        const albumsLastMonth = lastMonthIdx >= 0 ? shop.albums.values[lastMonthIdx] || 0 : 0;
-                        const albumsLastYear = lastYearIdx >= 0 ? shop.albums.values[lastYearIdx] || 0 : 0;
-
-                        const materials = shop.materials.values[idx] || 0;
-                        const materialsLastMonth = lastMonthIdx >= 0 ? shop.materials.values[lastMonthIdx] || 0 : 0;
-                        const materialsLastYear = lastYearIdx >= 0 ? shop.materials.values[lastYearIdx] || 0 : 0;
-
-                        shopList.push({
-                            id: shopId,
-                            name: shop.name,
-                            consumption: consumption,
-                            consumptionLastMonth: consumptionLastMonth,
-                            consumptionLastYear: consumptionLastYear,
-                            income: income,
-                            incomeLastMonth: incomeLastMonth,
-                            incomeLastYear: incomeLastYear,
-                            albums: albums,
-                            albumsLastMonth: albumsLastMonth,
-                            albumsLastYear: albumsLastYear,
-                            materials: materials,
-                            materialsLastMonth: materialsLastMonth,
-                            materialsLastYear: materialsLastYear
-                        });
-                    }
+                const hasMonthData = metricKeys.some(metric => shop[metric] && shop[metric].months && shop[metric].months.includes(month));
+                if (hasMonthData) {
+                    shopList.push({
+                        id: shopId,
+                        name: shop.name,
+                        consumption: getMetricValue(shop, 'consumption', month),
+                        consumptionLastMonth: getMetricValue(shop, 'consumption', lastMonth),
+                        consumptionLastYear: getMetricValue(shop, 'consumption', lastYearMonth),
+                        income: getMetricValue(shop, 'income', month),
+                        incomeLastMonth: getMetricValue(shop, 'income', lastMonth),
+                        incomeLastYear: getMetricValue(shop, 'income', lastYearMonth),
+                        albums: getMetricValue(shop, 'albums', month),
+                        albumsLastMonth: getMetricValue(shop, 'albums', lastMonth),
+                        albumsLastYear: getMetricValue(shop, 'albums', lastYearMonth),
+                        materials: getMetricValue(shop, 'materials', month),
+                        materialsLastMonth: getMetricValue(shop, 'materials', lastMonth),
+                        materialsLastYear: getMetricValue(shop, 'materials', lastYearMonth)
+                    });
                 }
             });
 
@@ -1355,10 +1279,7 @@
             document.querySelectorAll('.dimension-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            const currentIdx = currentMonthlyData.consumption.findIndex((_, idx) => {
-                const m = Object.values(mergedShopData)[0].consumption.months[idx];
-                return m === currentMonth;
-            });
+            const currentIdx = currentMonths.indexOf(currentMonth);
 
             const data = currentMonthlyData[dimension];
             const value = data[currentIdx] || 0;
@@ -1381,7 +1302,8 @@
 
             // 更新环比和同比数据 - 所有维度都显示
             const lastMonthIdx = currentIdx - 1;
-            const lastYearIdx = currentIdx - 12;
+            const lastYearMonth = currentMonth.replace(/^(\d+)年/, (_, year) => `${parseInt(year) - 1}年`);
+            const lastYearIdx = currentMonths.indexOf(lastYearMonth);
 
             const currentValue = data[currentIdx] || 0;
             const lastMonthValue = lastMonthIdx >= 0 ? data[lastMonthIdx] || 0 : 0;
@@ -1538,13 +1460,7 @@
 
         function updateTrendChart(data, dimension) {
             if (trendChartInstance) {
-                // 获取所有月份
-                let months = [];
-                const firstShop = Object.values(mergedShopData)[0];
-                if (firstShop && firstShop.consumption && firstShop.consumption.months) {
-                    months = firstShop.consumption.months;
-                }
-
+                const months = currentMonths || getAllMonths();
                 const currentIdx = months.indexOf(currentMonth);
                 const startIdx = Math.max(0, currentIdx - 11);
                 const chartData = data.slice(startIdx, currentIdx + 1);
